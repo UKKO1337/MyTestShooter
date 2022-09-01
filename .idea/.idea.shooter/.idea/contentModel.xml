@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ContentModelStore">
+    <e p="C:\Users\zhitk\AppData\Local\JetBrains\Rider2020.1\extResources" t="IncludeRecursive" />
+    <e p="C:\Users\zhitk\AppData\Local\JetBrains\Rider2020.1\resharper-host\Local\Transient\ReSharperHost\v201\SolutionCaches\_shooter.-1663837838.00" t="ExcludeRecursive" />
+    <e p="D:\projects for Unity\shooter" t="IncludeRecursive">
+      <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
+      <e p="Assets" t="Include">
+        <e p="CodeBase" t="Include">
+          <e p="Hero" t="Include">
+            <e p="CameraMover.cs" t="Include" />
+            <e p="Player.cs" t="Include" />
+            <e p="PlayerMover.cs" t="Include" />
+          </e>
+          <e p="Infrastructure" t="Include">
+            <e p="BootstrapState.cs" t="Include" />
+            <e p="Game.cs" t="Include" />
+            <e p="GameBootstrapper.cs" t="Include" />
+            <e p="GameLoopState.cs" t="Include" />
+            <e p="GameStateMachine.cs" t="Include" />
+            <e p="ICoroutineRunner.cs" t="Include" />
+            <e p="IGameBaseState.cs" t="Include" />
+            <e p="IGamePayloadedState.cs" t="Include" />
+            <e p="IGameState.cs" t="Include" />
+            <e p="LoadingCurtain.cs" t="Include" />
+            <e p="LoadLevelState.cs" t="Include" />
+            <e p="SceneLoader.cs" t="Include" />
+          </e>
+          <e p="Input" t="Include">
+            <e p="PlayerInput.cs" t="Include" />
+          </e>
+          <e p="Services" t="Include">
+            <e p="Input" t="Include">
+              <e p="IInputService.cs" t="Include" />
+              <e p="InputService.cs" t="Include" />
+            </e>
+          </e>
+        </e>
+      </e>
+      <e p="obj" t="ExcludeRecursive" />
+      <e p="Packages" t="ExcludeRecursive" />
+      <e p="shooter.sln" t="IncludeFlat" />
+      <e p="Temp\Bin" t="ExcludeRecursive" />
+    </e>
+  </component>
+</project>

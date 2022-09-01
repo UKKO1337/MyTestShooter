@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="e3fc4a87-725a-454b-b2c5-15633d81bb2b" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Assets/CodeBase/Hero/CameraMover.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/F1212AD1-DEC4-4CE7-B714-7976B91869C3/f0/252faf66/MonoBehaviour.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/CodeBase/Hero/PlayerMover.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/CodeBase/Infrastructure/LoadLevelState.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/CodeBase/Infrastructure/IGameBaseState.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/CodeBase/Infrastructure/IGamePayloadedState.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/CodeBase/Hero/Player.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.visualscripting@1.7.8/Runtime/VisualScripting.State/IState.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/CodeBase/Infrastructure/SceneLoader.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/CodeBase/Infrastructure/ICoroutineRunner.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/F1212AD1-DEC4-4CE7-B714-7976B91869C3/b9/bb70e80e/AsyncOperation.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/CodeBase/Infrastructure/GameBootstrapper.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/36F62D8E-760B-48F7-AF5D-32916F997CE1/a0/3a05e01d/EditorApplication.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/CodeBase/Input/PlayerInput.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/CodeBase/Infrastructure/BootstrapState.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/F1212AD1-DEC4-4CE7-B714-7976B91869C3/8d/caf5f4e2/SceneManager.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/CodeBase/Infrastructure/IGameState.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/CodeBase/Infrastructure/GameStateMachine.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/36F62D8E-760B-48F7-AF5D-32916F997CE1/84/75e0aa79/BuildPipelineInterfaces.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scenes/Initial.unity" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/CodeBase/Services/Input/IInputService.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/CodeBase/Infrastructure/Game.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/CodeBase/Services/Input/InputService.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/CodeBase/Infrastructure/GameLoopState.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Resources/Infrastructure/GameBootstrapper.prefab" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/F1212AD1-DEC4-4CE7-B714-7976B91869C3/bc/08feb156/ReflectionProbe.cs" root0="SKIP_HIGHLIGHTING" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/Assets/Sripts/PlayerMover.cs" />
+        <option value="$PROJECT_DIR$/Assets/Sripts/CameraMover.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/PlayerMover.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/CameraMover.cs" />
+        <option value="$PROJECT_DIR$/Assets/CodeBase/Scripts/Player.cs" />
+        <option value="$PROJECT_DIR$/Assets/CodeBase/Services/Input/IInputService.cs" />
+        <option value="$PROJECT_DIR$/Assets/CodeBase/Services/Input/InputService.cs" />
+        <option value="$PROJECT_DIR$/Assets/CodeBase/Scripts/CameraMover.cs" />
+        <option value="$PROJECT_DIR$/Assets/CodeBase/Scripts/PlayerMover.cs" />
+        <option value="$PROJECT_DIR$/Assets/CodeBase/Hero/Player.cs" />
+        <option value="$PROJECT_DIR$/Assets/CodeBase/Infrastructure/SceneLoader.cs" />
+        <option value="$PROJECT_DIR$/Assets/CodeBase/Hero/CameraMover.cs" />
+        <option value="$PROJECT_DIR$/Assets/CodeBase/Hero/PlayerMover.cs" />
+        <option value="$PROJECT_DIR$/Assets/CodeBase/Infrastructure/IGameState.cs" />
+        <option value="$PROJECT_DIR$/Assets/CodeBase/Infrastructure/BootstrapState.cs" />
+        <option value="$PROJECT_DIR$/Assets/CodeBase/Infrastructure/IGamePayloadedState.cs" />
+        <option value="$PROJECT_DIR$/Assets/CodeBase/Infrastructure/GameBootstrapper.cs" />
+        <option value="$PROJECT_DIR$/Assets/CodeBase/Infrastructure/Game.cs" />
+        <option value="$PROJECT_DIR$/Assets/CodeBase/Infrastructure/GameStateMachine.cs" />
+        <option value="$PROJECT_DIR$/Assets/CodeBase/Infrastructure/LoadLevelState.cs" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectId" id="2D1AeeZLW4SP8xxpDe4L3h8hmz2" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="DebuggerViewTab_PTCS_FirstProportionKey" value="0.34994584" />
+    <property name="DebuggerViewTab_PTCS_LastProportionKey" value="0.30010834" />
+    <property name="Discover.Launch.Via.Unity" value="true" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="settings.editor.selected.configurable" value="preferences.keymap" />
+  </component>
+  <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
+    <configuration name="Attach to Unity Editor &amp; Play" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="UNITY_ATTACH_AND_PLAY" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
+      <option name="allowRunningInParallel" value="false" />
+      <option name="listenPortForConnections" value="false" />
+      <option name="pid" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
+      <option name="allowRunningInParallel" value="false" />
+      <option name="listenPortForConnections" value="false" />
+      <option name="pid" />
+      <method v="2" />
+    </configuration>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="e3fc4a87-725a-454b-b2c5-15633d81bb2b" name="Default Changelist" comment="" />
+      <created>1659856314702</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1659856314702</updated>
+      <workItem from="1659856334486" duration="41000" />
+      <workItem from="1659856419055" duration="5675000" />
+      <workItem from="1659940041150" duration="913000" />
+      <workItem from="1659941062916" duration="5290000" />
+      <workItem from="1660215140467" duration="6116000" />
+      <workItem from="1660458004147" duration="4146000" />
+      <workItem from="1660481974299" duration="4331000" />
+      <workItem from="1660550759892" duration="5898000" />
+      <workItem from="1660634600630" duration="7367000" />
+      <workItem from="1660727205441" duration="3884000" />
+      <workItem from="1660807302470" duration="3358000" />
+      <workItem from="1661514070343" duration="4884000" />
+      <workItem from="1661577232527" duration="5344000" />
+      <workItem from="1661591260460" duration="3237000" />
+      <workItem from="1661752451524" duration="7437000" />
+      <workItem from="1661771330309" duration="1279000" />
+      <workItem from="1661929117151" duration="10565000" />
+    </task>
+    <servers />
+  </component>
+  <component name="UnityProjectConfiguration" hasMinimizedUI="true" />
+  <component name="UnityUnitTestConfiguration" currentTestLauncher="EditMode" />
+  <component name="VcsManagerConfiguration">
+    <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state width="1877" height="242" key="GridCell.Tab.0.bottom" timestamp="1661771235819">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1877" height="242" key="GridCell.Tab.0.bottom/0.0.1920.1080@0.0.1920.1080" timestamp="1661771235819" />
+    <state width="1877" height="242" key="GridCell.Tab.0.center" timestamp="1661771235819">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1877" height="242" key="GridCell.Tab.0.center/0.0.1920.1080@0.0.1920.1080" timestamp="1661771235819" />
+    <state width="1877" height="242" key="GridCell.Tab.0.left" timestamp="1661771235819">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1877" height="242" key="GridCell.Tab.0.left/0.0.1920.1080@0.0.1920.1080" timestamp="1661771235819" />
+    <state width="1877" height="242" key="GridCell.Tab.0.right" timestamp="1661771235819">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1877" height="242" key="GridCell.Tab.0.right/0.0.1920.1080@0.0.1920.1080" timestamp="1661771235819" />
+    <state width="1877" height="242" key="GridCell.Tab.1.bottom" timestamp="1661771235819">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1877" height="242" key="GridCell.Tab.1.bottom/0.0.1920.1080@0.0.1920.1080" timestamp="1661771235819" />
+    <state width="1877" height="242" key="GridCell.Tab.1.center" timestamp="1661771235819">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1877" height="242" key="GridCell.Tab.1.center/0.0.1920.1080@0.0.1920.1080" timestamp="1661771235819" />
+    <state width="1877" height="242" key="GridCell.Tab.1.left" timestamp="1661771235819">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1877" height="242" key="GridCell.Tab.1.left/0.0.1920.1080@0.0.1920.1080" timestamp="1661771235819" />
+    <state width="1877" height="242" key="GridCell.Tab.1.right" timestamp="1661771235819">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1877" height="242" key="GridCell.Tab.1.right/0.0.1920.1080@0.0.1920.1080" timestamp="1661771235819" />
+    <state width="1877" height="242" key="GridCell.Tab.2.bottom" timestamp="1661771235819">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1877" height="242" key="GridCell.Tab.2.bottom/0.0.1920.1080@0.0.1920.1080" timestamp="1661771235819" />
+    <state width="1877" height="242" key="GridCell.Tab.2.center" timestamp="1661771235819">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1877" height="242" key="GridCell.Tab.2.center/0.0.1920.1080@0.0.1920.1080" timestamp="1661771235819" />
+    <state width="1877" height="242" key="GridCell.Tab.2.left" timestamp="1661771235819">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1877" height="242" key="GridCell.Tab.2.left/0.0.1920.1080@0.0.1920.1080" timestamp="1661771235819" />
+    <state width="1877" height="242" key="GridCell.Tab.2.right" timestamp="1661771235819">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1877" height="242" key="GridCell.Tab.2.right/0.0.1920.1080@0.0.1920.1080" timestamp="1661771235819" />
+    <state width="1877" height="242" key="GridCell.Tab.3.bottom" timestamp="1661771235820">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1877" height="242" key="GridCell.Tab.3.bottom/0.0.1920.1080@0.0.1920.1080" timestamp="1661771235820" />
+    <state width="1877" height="242" key="GridCell.Tab.3.center" timestamp="1661771235820">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1877" height="242" key="GridCell.Tab.3.center/0.0.1920.1080@0.0.1920.1080" timestamp="1661771235820" />
+    <state width="1877" height="242" key="GridCell.Tab.3.left" timestamp="1661771235820">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1877" height="242" key="GridCell.Tab.3.left/0.0.1920.1080@0.0.1920.1080" timestamp="1661771235820" />
+    <state width="1877" height="242" key="GridCell.Tab.3.right" timestamp="1661771235820">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1877" height="242" key="GridCell.Tab.3.right/0.0.1920.1080@0.0.1920.1080" timestamp="1661771235820" />
+    <state x="788" y="213" key="RiderGenerateDialog" timestamp="1661943078022">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="788" y="213" key="RiderGenerateDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1661943078022" />
+    <state x="461" y="184" key="SettingsEditor" timestamp="1660217942926">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="461" y="184" key="SettingsEditor/0.0.1920.1080@0.0.1920.1080" timestamp="1660217942926" />
+    <state x="638" y="142" width="644" height="795" key="find.popup" timestamp="1661937630352">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="638" y="142" width="644" height="795" key="find.popup/0.0.1920.1080@0.0.1920.1080" timestamp="1661937630352" />
+    <state x="623" y="235" width="672" height="678" key="search.everywhere.popup" timestamp="1661577371883">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="623" y="235" width="672" height="678" key="search.everywhere.popup/0.0.1920.1080@0.0.1920.1080" timestamp="1661577371883" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Assets/CodeBase/Infrastructure/GameBootstrapper.cs</url>
+          <line>13</line>
+          <properties documentPath="$PROJECT_DIR$/Assets/CodeBase/Infrastructure/GameBootstrapper.cs" initialLine="10">
+            <startOffsets>
+              <option value="264" />
+            </startOffsets>
+            <endOffsets>
+              <option value="295" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+</project>
