@@ -1,18 +1,20 @@
 ﻿using System.Xml.Schema;
+using CodeBase.Infrastructure.Services;
 using UnityEngine;
 
 namespace CodeBase.Services.Input
 {
-  public interface IInputService
+  public interface IInputService : IService
+
   {
-    Vector2 MoveAxis { get; }
-    
-    Vector2 LookAxis { get; }
+  Vector2 MoveAxis { get; }
 
-    bool IsJumpButtonPressed();
-    bool IsSprintButtonPressed();
+  Vector2 LookAxis { get; }
 
-    void Enable();
-    void Disable();
+  bool IsJumpButtonPressed();
+  bool IsSprintButtonPressed();
+
+  void Enable();
+  void Disable();
   }
 }
