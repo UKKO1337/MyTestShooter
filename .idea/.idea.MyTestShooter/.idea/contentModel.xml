@@ -4,11 +4,25 @@
     <e p="C:\Users\zhitk\AppData\Local\JetBrains\Rider2020.1\extResources" t="IncludeRecursive" />
     <e p="C:\Users\zhitk\AppData\Local\JetBrains\Rider2020.1\resharper-host\Local\Transient\ReSharperHost\v201\SolutionCaches\_MyTestShooter.-1853276810.00" t="ExcludeRecursive" />
     <e p="D:\projects for Unity\MyTestShooter" t="IncludeRecursive">
+      <e p="Assembly-CSharp-Editor.csproj" t="IncludeRecursive" />
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
       <e p="Assets" t="Include">
         <e p="CodeBase" t="Include">
+          <e p="Data" t="Include">
+            <e p="DataExtensions.cs" t="Include" />
+            <e p="PlayerProgress.cs" t="Include" />
+            <e p="PositionOnLevel.cs" t="Include" />
+            <e p="Vector3Data.cs" t="Include" />
+            <e p="WorldData.cs" t="Include" />
+          </e>
+          <e p="Editor" t="Include">
+            <e p="Tools.cs" t="Include" />
+          </e>
           <e p="Hero" t="Include">
             <e p="CameraMover.cs" t="Include" />
+            <e p="Input" t="Include">
+              <e p="PlayerInput.cs" t="Include" />
+            </e>
             <e p="Player.cs" t="Include" />
             <e p="PlayerMover.cs" t="Include" />
           </e>
@@ -24,6 +38,7 @@
             </e>
             <e p="Game.cs" t="Include" />
             <e p="GameBootstrapper.cs" t="Include" />
+            <e p="GameRunner.cs" t="Include" />
             <e p="ICoroutineRunner.cs" t="Include" />
             <e p="IGameBaseState.cs" t="Include" />
             <e p="IGamePayloadedState.cs" t="Include" />
@@ -32,23 +47,31 @@
             <e p="SceneLoader.cs" t="Include" />
             <e p="Services" t="Include">
               <e p="AllServices.cs" t="Include" />
+              <e p="Input" t="Include">
+                <e p="IInputService.cs" t="Include" />
+                <e p="InputService.cs" t="Include" />
+              </e>
               <e p="IService.cs" t="Include" />
+              <e p="PersistentProgress" t="Include">
+                <e p="IPersistentProgressService.cs" t="Include" />
+                <e p="ISavedProgress.cs" t="Include" />
+                <e p="PersistentProgressService.cs" t="Include" />
+              </e>
+              <e p="SaveLoad" t="Include">
+                <e p="ISaveLoadService.cs" t="Include" />
+                <e p="SaveLoadService.cs" t="Include" />
+              </e>
             </e>
             <e p="States" t="Include">
               <e p="BootstrapState.cs" t="Include" />
               <e p="GameLoopState.cs" t="Include" />
               <e p="GameStateMachine.cs" t="Include" />
               <e p="LoadLevelState.cs" t="Include" />
+              <e p="LoadProgressState.cs" t="Include" />
             </e>
           </e>
-          <e p="Input" t="Include">
-            <e p="PlayerInput.cs" t="Include" />
-          </e>
-          <e p="Services" t="Include">
-            <e p="Input" t="Include">
-              <e p="IInputService.cs" t="Include" />
-              <e p="InputService.cs" t="Include" />
-            </e>
+          <e p="Logic" t="Include">
+            <e p="SaveTrigger.cs" t="Include" />
           </e>
         </e>
       </e>

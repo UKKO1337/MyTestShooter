@@ -1,6 +1,6 @@
 using CodeBase.Infrastructure;
 using CodeBase.Infrastructure.Services;
-using CodeBase.Services.Input;
+using CodeBase.Infrastructure.Services.Input;
 using UnityEngine;
 
 namespace CodeBase.Hero
@@ -42,9 +42,9 @@ namespace CodeBase.Hero
          _xRotation -= mouseAxisY;
          _xRotation = Mathf.Clamp(_xRotation, -90f, 90f);
          
-
          _player.Rotate(mouseAxisX * new Vector3(0, 1, 0));
          transform.localRotation = Quaternion.Euler(_xRotation,0,0);
       }
+      
    }
 }

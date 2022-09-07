@@ -6,6 +6,8 @@ TagManager:
   tags:
   - Ground
   - InitialPoint
+  - LoadingCurtain
+  - Wall
   layers:
   - Default
   - TransparentFX
