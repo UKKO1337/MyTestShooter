@@ -5,26 +5,51 @@
     <e p="C:\Users\zhitk\AppData\Local\JetBrains\Rider2020.1\resharper-host\Local\Transient\ReSharperHost\v201\SolutionCaches\_MyTestShooter.-1853276810.00" t="ExcludeRecursive" />
     <e p="D:\projects for Unity\MyTestShooter" t="IncludeRecursive">
       <e p="Assembly-CSharp-Editor.csproj" t="IncludeRecursive" />
+      <e p="Assembly-CSharp-firstpass.csproj" t="IncludeRecursive" />
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
       <e p="Assets" t="Include">
         <e p="CodeBase" t="Include">
           <e p="Data" t="Include">
             <e p="DataExtensions.cs" t="Include" />
+            <e p="KillData.cs" t="Include" />
             <e p="PlayerProgress.cs" t="Include" />
             <e p="PositionOnLevel.cs" t="Include" />
+            <e p="State.cs" t="Include" />
             <e p="Vector3Data.cs" t="Include" />
             <e p="WorldData.cs" t="Include" />
           </e>
           <e p="Editor" t="Include">
+            <e p="EnemySpawnerEditor.cs" t="Include" />
             <e p="Tools.cs" t="Include" />
+            <e p="UniqueIdEditor.cs" t="Include" />
+          </e>
+          <e p="Enemy" t="Include">
+            <e p="AgentMoveToPlayer.cs" t="Include" />
+            <e p="Aggro.cs" t="Include" />
+            <e p="AnimateAlongAgent.cs" t="Include" />
+            <e p="Attack.cs" t="Include" />
+            <e p="CheckAttackRange.cs" t="Include" />
+            <e p="EnemyAnimator.cs" t="Include" />
+            <e p="EnemyDeath.cs" t="Include" />
+            <e p="EnemyHealth.cs" t="Include" />
+            <e p="Follow.cs" t="Include" />
+            <e p="PhysicsDebug.cs" t="Include" />
+            <e p="RotateToPlayer.cs" t="Include" />
+            <e p="TriggerObserver.cs" t="Include" />
           </e>
           <e p="Hero" t="Include">
-            <e p="CameraMover.cs" t="Include" />
-            <e p="Input" t="Include">
-              <e p="PlayerInput.cs" t="Include" />
+            <e p="CrosshairObject.cs" t="Include" />
+            <e p="HitMarkOnPlayer.cs" t="Include" />
+            <e p="PlayerController" t="Include">
+              <e p="CameraMover.cs" t="Include" />
+              <e p="PlayerCrouching.cs" t="Include" />
+              <e p="PlayerJumper.cs" t="Include" />
+              <e p="PlayerMover.cs" t="Include" />
             </e>
-            <e p="Player.cs" t="Include" />
-            <e p="PlayerMover.cs" t="Include" />
+            <e p="PlayerDeath.cs" t="Include" />
+            <e p="PlayerHealth.cs" t="Include" />
+            <e p="Shoot.cs" t="Include" />
+            <e p="SprintBar.cs" t="Include" />
           </e>
           <e p="Infrastructure" t="Include">
             <e p="AssetManagement" t="Include">
@@ -50,6 +75,7 @@
               <e p="Input" t="Include">
                 <e p="IInputService.cs" t="Include" />
                 <e p="InputService.cs" t="Include" />
+                <e p="PlayerInput.cs" t="Include" />
               </e>
               <e p="IService.cs" t="Include" />
               <e p="PersistentProgress" t="Include">
@@ -71,7 +97,95 @@
             </e>
           </e>
           <e p="Logic" t="Include">
+            <e p="AnimatorState.cs" t="Include" />
+            <e p="AnimatorStateReporter.cs" t="Include" />
+            <e p="EnemySpawner.cs" t="Include" />
+            <e p="IAnimationStateReader.cs" t="Include" />
+            <e p="IHealth.cs" t="Include" />
             <e p="SaveTrigger.cs" t="Include" />
+            <e p="UniqueId.cs" t="Include" />
+          </e>
+          <e p="UI" t="Include">
+            <e p="ActorUI.cs" t="Include" />
+            <e p="HPBar.cs" t="Include" />
+          </e>
+        </e>
+        <e p="Plugins" t="Include">
+          <e p="Demigiant" t="Include">
+            <e p="DOTween" t="Include">
+              <e p="Modules" t="Include">
+                <e p="DOTweenModuleAudio.cs" t="Include" />
+                <e p="DOTweenModuleEPOOutline.cs" t="Include" />
+                <e p="DOTweenModulePhysics.cs" t="Include" />
+                <e p="DOTweenModulePhysics2D.cs" t="Include" />
+                <e p="DOTweenModuleSprite.cs" t="Include" />
+                <e p="DOTweenModuleUI.cs" t="Include" />
+                <e p="DOTweenModuleUnityVersion.cs" t="Include" />
+                <e p="DOTweenModuleUtils.cs" t="Include" />
+              </e>
+              <e p="readme.txt" t="Include" />
+            </e>
+          </e>
+        </e>
+        <e p="Resources" t="Include">
+          <e p="JMO Assets" t="Include">
+            <e p="Cartoon FX Easy Editor" t="Include">
+              <e p="CartoonFX Easy Editor Readme.txt" t="Include" />
+              <e p="Editor" t="Include">
+                <e p="CFXEasyEditor.cs" t="Include" />
+              </e>
+            </e>
+            <e p="WarFX" t="Include">
+              <e p="!WarFX Readme.txt" t="Include" />
+              <e p="_Effects" t="Include">
+                <e p="MuzzleFlashes" t="Include">
+                  <e p="!MuzzleFlash Differences.txt" t="Include" />
+                </e>
+              </e>
+              <e p="_Effects (Mobile)" t="Include">
+                <e p="MuzzleFlashes" t="Include">
+                  <e p="!MuzzleFlash Differences.txt" t="Include" />
+                </e>
+              </e>
+              <e p="Demo" t="Include">
+                <e p="Assets" t="Include">
+                  <e p="CFX_AutoStopLoopedEffect.cs" t="Include" />
+                  <e p="CFX_Demo_RandomDir.cs" t="Include" />
+                  <e p="CFX_Demo_RotateCamera.cs" t="Include" />
+                  <e p="CFX_Demo_Translate.cs" t="Include" />
+                  <e p="WFX_Demo.cs" t="Include" />
+                  <e p="WFX_Demo_DeleteAfterDelay.cs" t="Include" />
+                  <e p="WFX_Demo_New.cs" t="Include" />
+                  <e p="WFX_Demo_RandomDir.cs" t="Include" />
+                  <e p="WFX_Demo_Wall.cs" t="Include" />
+                </e>
+              </e>
+              <e p="Editor" t="Include">
+                <e p="CFX_SpawnSystemEditor.cs" t="Include" />
+              </e>
+              <e p="Scripts" t="Include">
+                <e p="CFX_AutoDestructShuriken.cs" t="Include" />
+                <e p="CFX_LightIntensityFade.cs" t="Include" />
+                <e p="WFX_BulletHoleDecal.cs" t="Include" />
+                <e p="WFX_LightFlicker.cs" t="Include" />
+              </e>
+              <e p="Shaders" t="Include">
+                <e p="WFX_S Add Scroll.shader" t="Include" />
+                <e p="WFX_S Alpha-Diffuse TintColor.shader" t="Include" />
+                <e p="WFX_S Alpha-Specular TintColor.shader" t="Include" />
+                <e p="WFX_S AlphaBlend NoSoftParticles.shader" t="Include" />
+                <e p="WFX_S AlphaBlend Scroll.shader" t="Include" />
+                <e p="WFX_S Multiply Soft Scroll.shader" t="Include" />
+                <e p="WFX_S Multiply Soft.shader" t="Include" />
+                <e p="WFX_S Particle Add A8.shader" t="Include" />
+                <e p="WFX_S Particle AddSoft A8.shader" t="Include" />
+                <e p="WFX_S Particle Multiply A8.shader" t="Include" />
+                <e p="WFX_S Smoke Scroll.shader" t="Include" />
+              </e>
+              <e p="Spawn System" t="Include">
+                <e p="CFX_SpawnSystem.cs" t="Include" />
+              </e>
+            </e>
           </e>
         </e>
       </e>

@@ -20,66 +20,70 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ec0bde3f-bb8e-47bc-876f-6088a74511e2" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/CodeBase/Data.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/CodeBase/Data/DataExtensions.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/CodeBase/Data/DataExtensions.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/CodeBase/Data/PlayerProgress.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/CodeBase/Data/PlayerProgress.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/CodeBase/Data/PositionOnLevel.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/CodeBase/Data/PositionOnLevel.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/CodeBase/Data/Vector3Data.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/CodeBase/Data/Vector3Data.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/CodeBase/Data/WorldData.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/CodeBase/Data/WorldData.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/CodeBase/Infrastructure/GameRunner.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/CodeBase/Infrastructure/GameRunner.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/CodeBase/Infrastructure/Services/PersistentProgress.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/CodeBase/Infrastructure/Services/PersistentProgress/IPersistentProgressService.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/CodeBase/Infrastructure/Services/PersistentProgress/IPersistentProgressService.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/CodeBase/Infrastructure/Services/PersistentProgress/ISavedProgress.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/CodeBase/Infrastructure/Services/PersistentProgress/ISavedProgress.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/CodeBase/Infrastructure/Services/PersistentProgress/PersistentProgressService.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/CodeBase/Infrastructure/Services/PersistentProgress/PersistentProgressService.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/CodeBase/Infrastructure/Services/SaveLoad.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/CodeBase/Infrastructure/Services/SaveLoad/ISaveLoadService.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/CodeBase/Infrastructure/Services/SaveLoad/ISaveLoadService.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/CodeBase/Infrastructure/Services/SaveLoad/SaveLoadService.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/CodeBase/Infrastructure/Services/SaveLoad/SaveLoadService.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/CodeBase/Infrastructure/States/LoadProgressState.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/CodeBase/Infrastructure/States/LoadProgressState.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/CodeBase/Logic.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/CodeBase/Logic/SaveTrigger.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/CodeBase/Logic/SaveTrigger.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/CodeBase/Data/KillData.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/CodeBase/Data/KillData.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/CodeBase/Data/State.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/CodeBase/Data/State.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/CodeBase/Editor/EnemySpawnerEditor.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/CodeBase/Editor/EnemySpawnerEditor.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/CodeBase/Editor/UniqueIdEditor.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/CodeBase/Editor/UniqueIdEditor.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/CodeBase/Enemy/Aggro.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/CodeBase/Enemy/Aggro.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/CodeBase/Enemy/CheckAttackRange.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/CodeBase/Enemy/CheckAttackRange.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/CodeBase/Enemy/EnemyAnimator.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/CodeBase/Enemy/EnemyAnimator.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/CodeBase/Enemy/EnemyDeath.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/CodeBase/Enemy/EnemyDeath.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/CodeBase/Enemy/EnemyHealth.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/CodeBase/Enemy/EnemyHealth.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/CodeBase/Enemy/Follow.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/CodeBase/Enemy/Follow.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/CodeBase/Logic/EnemySpawner.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/CodeBase/Logic/EnemySpawner.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/CodeBase/Logic/IAnimationStateReader.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/CodeBase/Logic/IAnimationStateReader.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/CodeBase/Logic/IHealth.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/CodeBase/Logic/IHealth.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/CodeBase/Logic/UniqueId.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/CodeBase/Logic/UniqueId.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/CodeBase/UI/ActorUI.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/CodeBase/UI/ActorUI.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.MyTestShooter/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.MyTestShooter/.idea/contentModel.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.MyTestShooter/.idea/indexLayout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.MyTestShooter/.idea/indexLayout.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.MyTestShooter/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.MyTestShooter/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/CodeBase/Hero/CameraMover.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CodeBase/Hero/CameraMover.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/CodeBase/Hero/PlayerMover.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CodeBase/Hero/PlayerMover.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CodeBase/Data/PlayerProgress.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CodeBase/Data/PlayerProgress.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CodeBase/Hero/CameraMover.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CodeBase/Hero/CameraMover.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CodeBase/Hero/Input.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CodeBase/Hero/Input/PlayerInput.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CodeBase/Hero/Input/PlayerInput.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CodeBase/Hero/Input/PlayerInput.inputactions" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CodeBase/Hero/Input/PlayerInput.inputactions.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CodeBase/Hero/Player.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CodeBase/Hero/Player.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CodeBase/Hero/PlayerMover.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CodeBase/Hero/PlayerMover.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CodeBase/Infrastructure/AssetManagement/AssetPath.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CodeBase/Infrastructure/AssetManagement/AssetPath.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CodeBase/Infrastructure/AssetManagement/AssetProvider.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CodeBase/Infrastructure/AssetManagement/AssetProvider.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CodeBase/Infrastructure/AssetManagement/IAssetProvider.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CodeBase/Infrastructure/AssetManagement/IAssetProvider.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/CodeBase/Infrastructure/Factory/GameFactory.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CodeBase/Infrastructure/Factory/GameFactory.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/CodeBase/Infrastructure/Factory/IGameFactory.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CodeBase/Infrastructure/Factory/IGameFactory.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/CodeBase/Infrastructure/GameBootstrapper.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CodeBase/Infrastructure/GameBootstrapper.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/CodeBase/Infrastructure/GameBootstrapper.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CodeBase/Infrastructure/GameBootstrapper.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CodeBase/Infrastructure/LoadingCurtain.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CodeBase/Infrastructure/LoadingCurtain.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CodeBase/Infrastructure/Services/AllServices.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CodeBase/Infrastructure/Services/AllServices.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CodeBase/Infrastructure/Services/Input/IInputService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CodeBase/Infrastructure/Services/Input/IInputService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CodeBase/Infrastructure/Services/Input/InputService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CodeBase/Infrastructure/Services/Input/InputService.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/CodeBase/Infrastructure/States/BootstrapState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CodeBase/Infrastructure/States/BootstrapState.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/CodeBase/Infrastructure/States/GameStateMachine.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CodeBase/Infrastructure/States/GameStateMachine.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/CodeBase/Infrastructure/States/LoadLevelState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CodeBase/Infrastructure/States/LoadLevelState.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/CodeBase/Input.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CodeBase/Hero/Input.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/CodeBase/Input/PlayerInput.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CodeBase/Hero/Input/PlayerInput.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/CodeBase/Input/PlayerInput.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CodeBase/Hero/Input/PlayerInput.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/CodeBase/Input/PlayerInput.inputactions" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CodeBase/Hero/Input/PlayerInput.inputactions" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/CodeBase/Input/PlayerInput.inputactions.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CodeBase/Hero/Input/PlayerInput.inputactions.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/CodeBase/Services.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/CodeBase/Services/Input.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CodeBase/Infrastructure/Services/Input.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/CodeBase/Services/Input/IInputService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CodeBase/Infrastructure/Services/Input/IInputService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/CodeBase/Services/Input/IInputService.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CodeBase/Infrastructure/Services/Input/IInputService.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/CodeBase/Services/Input/InputService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CodeBase/Infrastructure/Services/Input/InputService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/CodeBase/Services/Input/InputService.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CodeBase/Infrastructure/Services/Input/InputService.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CodeBase/Infrastructure/States/LoadProgressState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CodeBase/Infrastructure/States/LoadProgressState.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Resources/Hero/Hero.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Hero/Hero.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Infrastructure/GameBootstrapper.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Infrastructure/GameBootstrapper.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Initial.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Initial.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Hero/Hero.prefab.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Hero/Hero.prefab.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SceneAssets/SaveTrigger.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SceneAssets/SaveTrigger.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Main.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Packages/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/manifest.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Packages/packages-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/packages-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ProjectSettings/DynamicsManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/DynamicsManager.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/NavMeshAreas.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/NavMeshAreas.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/Packages/com.unity.probuilder/Settings.json" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/Packages/com.unity.probuilder/Settings.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -91,75 +95,135 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/Assets/CodeBase/Infrastructure/States/LoadLevelState.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/CodeBase/Data/WorldData.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/CodeBase/Infrastructure/AssetManagement/AssetProvider.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/CodeBase/Infrastructure/IGameState.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/CodeBase/Infrastructure/States/GameStateMachine.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/CodeBase/Logic/EnemySpawner.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/F1212AD1-DEC4-4CE7-B714-7976B91869C3/1d/b7a00053/KeyCode.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/CodeBase/Infrastructure/AssetManagement/AssetPath.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/CodeBase/Data/PositionOnLevel.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/CodeBase/Infrastructure/GameBootstrapper.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/CodeBase/Infrastructure/IGameBaseState.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/CodeBase/Data/PlayerProgress.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/CodeBase/Infrastructure/Services/AllServices.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ugui@1.0.0/Runtime/UI/Core/Image.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/CodeBase/Editor/UniqueIdEditor.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/986BC431-530C-4E10-A9A6-6DB75CCF7A92/94/cf4006d5/CharacterController.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/CodeBase/Infrastructure/Services/SaveLoad/SaveLoadService.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/CodeBase/Infrastructure/States/BootstrapState.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/CodeBase/Editor/Tools.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/CodeBase/Infrastructure/Game.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/CodeBase/Infrastructure/Services/Input/IInputService.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/861E23C6-7270-4A4A-8ECA-9C234AF0CAC5/83/a48fb63b/Void.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/CodeBase/Infrastructure/Services/PersistentProgress/IPersistentProgressService.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/CodeBase/Hero/PlayerDeath.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/CodeBase/Infrastructure/Factory/GameFactory.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/CodeBase/Infrastructure/AssetManagement/IAssetProvider.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/CodeBase/Hero/CameraMover.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/CodeBase/Hero/PlayerMover.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/CodeBase/Hero/SprintBar.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/CodeBase/Infrastructure/Services/IService.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/CodeBase/Infrastructure/Services/SaveLoad/ISaveLoadService.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/CodeBase/Hero/HitMarkOnPlayer.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/CodeBase/Data/DataExtensions.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/CodeBase/Infrastructure/Factory/IGameFactory.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/CodeBase/Infrastructure/Services/PersistentProgress/PersistentProgressService.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/CodeBase/Data/State.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/CodeBase/Data/Vector3Data.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/CodeBase/Infrastructure/GameRunner.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/CodeBase/Editor/EnemySpawnerEditor.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/CodeBase/Infrastructure/States/LoadProgressState.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/CodeBase/Infrastructure/Services/PersistentProgress/ISavedProgress.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/CodeBase/Logic/SaveTrigger.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/CodeBase/Enemy/PhysicsDebug.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/CodeBase/Hero/PlayerController/PlayerMover.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/F1212AD1-DEC4-4CE7-B714-7976B91869C3/f0/252faf66/MonoBehaviour.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/CodeBase/Infrastructure/States/LoadLevelState.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/861E23C6-7270-4A4A-8ECA-9C234AF0CAC5/15/4ad23cda/Action.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/CodeBase/Data/WorldData.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/CodeBase/Enemy/TriggerObserver.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/CodeBase/Infrastructure/AssetManagement/AssetProvider.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/CodeBase/Infrastructure/IGameState.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/CodeBase/Hero/PlayerController/PlayerJumper.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/CodeBase/Infrastructure/States/GameStateMachine.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/CodeBase/Infrastructure/GameBootstrapper.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/CodeBase/Enemy/RotateToPlayer.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/CodeBase/Hero/PlayerController/PlayerCrouching.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/CodeBase/Infrastructure/IGameBaseState.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/CodeBase/Data/PlayerProgress.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/CodeBase/UI/HPBar.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/CodeBase/Logic/IHealth.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/CodeBase/Logic/AnimatorStateReporter.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/CodeBase/Infrastructure/SceneLoader.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/CodeBase/Infrastructure/Services/AllServices.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/CodeBase/Infrastructure/States/BootstrapState.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/CodeBase/Logic/IAnimationStateReader.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/CodeBase/Infrastructure/Game.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/CodeBase/Hero/PlayerHealth.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/CodeBase/Enemy/EnemyAnimator.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/CodeBase/Hero/PlayerController/CameraMover.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/CodeBase/Infrastructure/Services/Input/IInputService.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/CodeBase/Enemy/EnemyHealth.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/861E23C6-7270-4A4A-8ECA-9C234AF0CAC5/83/a48fb63b/Void.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/CodeBase/Infrastructure/Services/Input/InputService.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/CodeBase/Infrastructure/AssetManagement/IAssetProvider.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/F1212AD1-DEC4-4CE7-B714-7976B91869C3/ba/701ffb6e/PlayerPrefs.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/CodeBase/Enemy/Attack.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/CodeBase/Infrastructure/Services/SaveLoad/ISaveLoadService.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/CodeBase/Infrastructure/Services/Input/PlayerInput.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/CodeBase/UI/ActorUI.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/CodeBase/Enemy/CheckAttackRange.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/CodeBase/Enemy/AnimateAlongAgent.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/CodeBase/Enemy/Aggro.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/CodeBase/Enemy/Follow.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/CodeBase/Enemy/EnemyDeath.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/CodeBase/Hero/Shoot.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/CodeBase/Data/KillData.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/CodeBase/Infrastructure/GameRunner.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/CodeBase/Logic/UniqueId.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/CodeBase/Enemy/AgentMoveToPlayer.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/9F095112-63A3-4E12-A037-C48D2C214923/be/05faa13e/Animator.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/CodeBase/Logic/AnimatorState.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/CodeBase/Infrastructure/Services/PersistentProgress/ISavedProgress.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/CodeBase/Hero/CrosshairObject.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Assets/CodeBase/Infrastructure/IGameFactory.cs" />
-        <option value="$PROJECT_DIR$/Assets/CodeBase/Infrastructure/LoadLevelState.cs" />
-        <option value="$PROJECT_DIR$/Assets/CodeBase/Infrastructure/AssetProvider.cs" />
-        <option value="$PROJECT_DIR$/Assets/CodeBase/Infrastructure/AssetManagement/IAssets.cs" />
-        <option value="$PROJECT_DIR$/Assets/CodeBase/Infrastructure/AssetManagement/AssetPath.cs" />
-        <option value="$PROJECT_DIR$/Assets/CodeBase/Infrastructure/GameFactory.cs" />
-        <option value="$PROJECT_DIR$/Assets/CodeBase/Infrastructure/Factory/IGameFactory.cs" />
-        <option value="$PROJECT_DIR$/Assets/CodeBase/Infrastructure/AssetManagement/IAssetProvider.cs" />
-        <option value="$PROJECT_DIR$/Assets/CodeBase/Services/Input/IInputService.cs" />
-        <option value="$PROJECT_DIR$/Assets/CodeBase/Infrastructure/AssetManagement/AssetProvider.cs" />
+        <option value="$PROJECT_DIR$/Assets/CodeBase/Enemy/CheckAttackRange.cs" />
+        <option value="$PROJECT_DIR$/Assets/CodeBase/Enemy/AnimateAlongAgent.cs" />
+        <option value="$PROJECT_DIR$/Assets/CodeBase/Hero/ShowDamage.cs" />
+        <option value="$PROJECT_DIR$/Assets/CodeBase/Hero/HPBar.cs" />
         <option value="$PROJECT_DIR$/Assets/CodeBase/Infrastructure/Services/AllServices.cs" />
-        <option value="$PROJECT_DIR$/Assets/CodeBase/Infrastructure/Game.cs" />
-        <option value="$PROJECT_DIR$/Assets/CodeBase/Infrastructure/Services/PersistentProgress/PersistentProgressService.cs" />
-        <option value="$PROJECT_DIR$/Assets/CodeBase/Infrastructure/Services/PersistentProgress/IPersistentProgressService.cs" />
-        <option value="$PROJECT_DIR$/Assets/CodeBase/Hero/CameraMover.cs" />
-        <option value="$PROJECT_DIR$/Assets/CodeBase/Infrastructure/States/LoadProgressState.cs" />
-        <option value="$PROJECT_DIR$/Assets/CodeBase/Infrastructure/Services/SaveLoad/ISaveLoadService.cs" />
-        <option value="$PROJECT_DIR$/Assets/CodeBase/Data/PlayerProgress.cs" />
-        <option value="$PROJECT_DIR$/Assets/CodeBase/Data/WorldData.cs" />
-        <option value="$PROJECT_DIR$/Assets/CodeBase/Data/PositionOnLevel.cs" />
-        <option value="$PROJECT_DIR$/Assets/CodeBase/Infrastructure/Services/PersistentProgress/ISavedProgress.cs" />
-        <option value="$PROJECT_DIR$/Assets/CodeBase/Infrastructure/Factory/GameFactory.cs" />
-        <option value="$PROJECT_DIR$/Assets/CodeBase/Infrastructure/Services/SaveLoad/SaveLoadService.cs" />
-        <option value="$PROJECT_DIR$/Assets/CodeBase/Infrastructure/States/GameStateMachine.cs" />
-        <option value="$PROJECT_DIR$/Assets/CodeBase/Infrastructure/States/LoadLevelState.cs" />
-        <option value="$PROJECT_DIR$/Assets/CodeBase/Logic/SaveTrigger.cs" />
-        <option value="$PROJECT_DIR$/Assets/CodeBase/Data/DataExtensions.cs" />
-        <option value="$PROJECT_DIR$/Assets/CodeBase/Hero/PlayerMover.cs" />
+        <option value="$PROJECT_DIR$/Assets/CodeBase/Enemy/PhysicsDebug.cs" />
+        <option value="$PROJECT_DIR$/Assets/CodeBase/Infrastructure/AssetManagement/IAssetProvider.cs" />
+        <option value="$PROJECT_DIR$/Assets/CodeBase/Infrastructure/AssetManagement/AssetProvider.cs" />
+        <option value="$PROJECT_DIR$/Assets/CrosshairObject.cs" />
+        <option value="$PROJECT_DIR$/Assets/SprintBar.cs" />
         <option value="$PROJECT_DIR$/Assets/CodeBase/Infrastructure/States/BootstrapState.cs" />
-        <option value="$PROJECT_DIR$/Assets/CodeBase/Editor/Tools.cs" />
-        <option value="$PROJECT_DIR$/Assets/CodeBase/Infrastructure/GameBootstrapper.GameRunner.cs" />
-        <option value="$PROJECT_DIR$/Assets/CodeBase/Infrastructure/GameBootstrapper.cs" />
+        <option value="$PROJECT_DIR$/Assets/CodeBase/Hero/PlayerJumper.cs" />
+        <option value="$PROJECT_DIR$/Assets/CodeBase/Hero/PlayerCrouching.cs" />
+        <option value="$PROJECT_DIR$/Assets/CodeBase/Hero/CameraMover.cs" />
+        <option value="$PROJECT_DIR$/Assets/CodeBase/Hero/FirstPersonController.cs" />
+        <option value="$PROJECT_DIR$/Assets/CodeBase/Hero/PlayerController.cs" />
+        <option value="$PROJECT_DIR$/Assets/CodeBase/Hero/CrosshairObject.cs" />
+        <option value="$PROJECT_DIR$/Assets/CodeBase/Hero/PlayerMover.cs" />
+        <option value="$PROJECT_DIR$/Assets/CodeBase/Infrastructure/Services/Input/IInputService.cs" />
+        <option value="$PROJECT_DIR$/Assets/CodeBase/Infrastructure/AssetManagement/AssetPath.cs" />
+        <option value="$PROJECT_DIR$/Assets/CodeBase/Infrastructure/States/LoadProgressState.cs" />
+        <option value="$PROJECT_DIR$/Assets/CodeBase/UI/HPBar.cs" />
+        <option value="$PROJECT_DIR$/Assets/CodeBase/Hero/HeroHealth.cs" />
+        <option value="$PROJECT_DIR$/Assets/CodeBase/Hero/PlayerController/PlayerMover.cs" />
+        <option value="$PROJECT_DIR$/Assets/CodeBase/Hero/SprintBar.cs" />
+        <option value="$PROJECT_DIR$/Assets/CodeBase/Hero/HeroDeath.cs" />
+        <option value="$PROJECT_DIR$/Assets/CodeBase/Hero/PlayerController/CameraMover.cs" />
+        <option value="$PROJECT_DIR$/Assets/Resources/Weapon/Modern Guns - Handgun/_Demo Assets/SimpleShoot.cs" />
+        <option value="$PROJECT_DIR$/Assets/CodeBase/Infrastructure/Services/Input/InputService.cs" />
+        <option value="$PROJECT_DIR$/Assets/CodeBase/Hero/Weapon.cs" />
+        <option value="$PROJECT_DIR$/Assets/CodeBase/Hero/PlayerDeath.cs" />
+        <option value="$PROJECT_DIR$/Assets/CodeBase/Hero/HitMarkOnPlayer.cs" />
+        <option value="$PROJECT_DIR$/Assets/CodeBase/Hero/PlayerHealth.cs" />
+        <option value="$PROJECT_DIR$/Assets/CodeBase/Enemy/Attack.cs" />
+        <option value="$PROJECT_DIR$/Assets/CodeBase/Logic/IHealth.cs" />
+        <option value="$PROJECT_DIR$/Assets/CodeBase/Enemy/EnemyHealth.cs" />
+        <option value="$PROJECT_DIR$/Assets/CodeBase/UI/ActorUI.cs" />
+        <option value="$PROJECT_DIR$/Assets/CodeBase/Enemy/EnemyDeath.cs" />
+        <option value="$PROJECT_DIR$/Assets/CodeBase/Enemy/Aggro.cs" />
+        <option value="$PROJECT_DIR$/Assets/CodeBase/Hero/Shoot.cs" />
+        <option value="$PROJECT_DIR$/Assets/JMO Assets/WarFX/Scripts/WFX_LightFlicker.cs" />
+        <option value="$PROJECT_DIR$/Assets/CodeBase/Editor/EnemySpawnerEditor.cs" />
+        <option value="$PROJECT_DIR$/Assets/CodeBase/Logic/UbiqueId.cs" />
+        <option value="$PROJECT_DIR$/Assets/CodeBase/Logic/UniqueId.cs" />
+        <option value="$PROJECT_DIR$/Assets/CodeBase/Editor/UniqueIdEditor.cs" />
+        <option value="$PROJECT_DIR$/Assets/CodeBase/Data/PlayerProgress.cs" />
+        <option value="$PROJECT_DIR$/Assets/CodeBase/Data/KillData.cs" />
+        <option value="$PROJECT_DIR$/Assets/CodeBase/Logic/EnemySpawner.cs" />
+        <option value="$PROJECT_DIR$/Assets/CodeBase/Infrastructure/Factory/GameFactory.cs" />
+        <option value="$PROJECT_DIR$/Assets/CodeBase/Infrastructure/Factory/IGameFactory.cs" />
+        <option value="$PROJECT_DIR$/Assets/CodeBase/Infrastructure/States/LoadLevelState.cs" />
       </list>
     </option>
   </component>
@@ -207,7 +271,26 @@
       <workItem from="1662277306017" duration="7015000" />
       <workItem from="1662367217338" duration="10198000" />
       <workItem from="1662467277974" duration="6813000" />
-      <workItem from="1662529151326" duration="5627000" />
+      <workItem from="1662529151326" duration="6622000" />
+      <workItem from="1662643459010" duration="839000" />
+      <workItem from="1662646303326" duration="5929000" />
+      <workItem from="1662701502474" duration="6355000" />
+      <workItem from="1662727404832" duration="498000" />
+      <workItem from="1662787972903" duration="10057000" />
+      <workItem from="1662874319216" duration="20756000" />
+      <workItem from="1662960136184" duration="11611000" />
+      <workItem from="1663048269108" duration="9611000" />
+      <workItem from="1663067200341" duration="654000" />
+      <workItem from="1663136963093" duration="15821000" />
+      <workItem from="1663395701092" duration="6280000" />
+      <workItem from="1663478947150" duration="24985000" />
+      <workItem from="1663567166079" duration="14452000" />
+      <workItem from="1663656713738" duration="4648000" />
+      <workItem from="1663742311369" duration="16793000" />
+      <workItem from="1663825747579" duration="13480000" />
+      <workItem from="1663905243662" duration="9418000" />
+      <workItem from="1664082943107" duration="14425000" />
+      <workItem from="1664168819042" duration="9266000" />
     </task>
     <servers />
   </component>
@@ -229,10 +312,10 @@
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="774" y="241" key="RiderGenerateDialog" timestamp="1662470747137">
+    <state x="774" y="241" key="RiderGenerateDialog" timestamp="1664179155393">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state x="774" y="241" key="RiderGenerateDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1662470747137" />
+    <state x="774" y="241" key="RiderGenerateDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1664179155393" />
     <state x="461" y="184" key="SettingsEditor" timestamp="1662028314060">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
@@ -241,9 +324,13 @@
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="92" y="92" width="1736" height="896" key="VCS.FileHistoryDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1662367567391" />
-    <state x="623" y="235" width="672" height="678" key="search.everywhere.popup" timestamp="1662469893938">
+    <state x="737" y="216" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1663137876075">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state x="623" y="235" width="672" height="678" key="search.everywhere.popup/0.0.1920.1080@0.0.1920.1080" timestamp="1662469893938" />
+    <state x="737" y="216" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.0.1920.1080@0.0.1920.1080" timestamp="1663137876075" />
+    <state x="623" y="235" width="672" height="678" key="search.everywhere.popup" timestamp="1664087183100">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="623" y="235" width="672" height="678" key="search.everywhere.popup/0.0.1920.1080@0.0.1920.1080" timestamp="1664087183100" />
   </component>
 </project>

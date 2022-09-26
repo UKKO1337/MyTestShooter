@@ -19,9 +19,13 @@ namespace CodeBase.Infrastructure.States
       _stateMachine = stateMachine;
       _sceneLoader = sceneLoader;
       _services = services;
-      
+
       RegisterServices();
+      EnableInputService();
     }
+
+    private void EnableInputService() => 
+      _services.Single<IInputService>().Enable();
 
     public void Enter()
     {
@@ -37,16 +41,12 @@ namespace CodeBase.Infrastructure.States
 
     private void RegisterServices()
     {
-      _services.RegisterSingle<IInputService>(InputService());
+      _services.RegisterSingle<IInputService>(new InputService());
       _services.RegisterSingle<IAssets>(new AssetProvider());
       _services.RegisterSingle<IPersistentProgressService>(new PersistentProgressService());
       _services.RegisterSingle<IGameFactory>(new GameFactory(_services.Single<IAssets>()));
-      _services.RegisterSingle<ISaveLoadService>(implementation: new SaveLoadService(_services.Single<IPersistentProgressService>(), _services.Single<IGameFactory>()));
-    }
-
-    private static IInputService InputService()
-    {
-      return new InputService();
+      _services.RegisterSingle<ISaveLoadService>(new SaveLoadService(_services.Single<IPersistentProgressService>(),
+        _services.Single<IGameFactory>()));
     }
   }
 }

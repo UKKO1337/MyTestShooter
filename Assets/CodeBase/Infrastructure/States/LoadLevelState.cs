@@ -1,6 +1,9 @@
-﻿using CodeBase.Infrastructure.Factory;
+﻿using CodeBase.Hero;
+using CodeBase.Hero.PlayerController;
+using CodeBase.Infrastructure.Factory;
 using CodeBase.Infrastructure.Services.PersistentProgress;
 using CodeBase.Logic;
+using CodeBase.UI;
 using UnityEngine;
 
 namespace CodeBase.Infrastructure.States
@@ -8,7 +11,8 @@ namespace CodeBase.Infrastructure.States
   public class LoadLevelState : IGamePayloadedState<string>
   {
     private const string InitialPointTag = "InitialPoint";
-    
+    private const string EnemySpawnerTag = "EnemySpawner";
+
     private readonly GameStateMachine _stateMachine;
     private readonly SceneLoader _sceneLoader;
     private readonly LoadingCurtain _curtain;
@@ -50,7 +54,32 @@ namespace CodeBase.Infrastructure.States
 
     private void InitGameWorld()
     {
-      GameObject hero = _gameFactory.CreateHero(GameObject.FindWithTag(InitialPointTag));
+      InitSpawners();
+      GameObject hero = InitHero();
+      InitHud(hero);
+    }
+
+    private void InitSpawners()
+    {
+      foreach (GameObject spawnerObject in GameObject.FindGameObjectsWithTag(EnemySpawnerTag))
+      {
+        var spawner = spawnerObject.GetComponent<EnemySpawner>();
+        _gameFactory.Register(spawner);
+      }
+    }
+
+    private void InitHud(GameObject hero)
+    {
+      GameObject hud = _gameFactory.CreateHUD();
+      
+      hud.GetComponentInChildren<ActorUI>()
+        .Construct(hero.GetComponent<PlayerHealth>(), hero.GetComponent<PlayerMover>());
+    }
+
+    private GameObject InitHero()
+    {
+      return _gameFactory.CreateHero(at: GameObject
+        .FindGameObjectWithTag(InitialPointTag));
     }
   }
 }
