@@ -1,9 +1,6 @@
 using System.Linq;
-using CodeBase.Hero;
 using CodeBase.Infrastructure.Factory;
-using CodeBase.Infrastructure.Services;
 using CodeBase.Logic;
-using UnityEditor;
 using UnityEngine;
 
 namespace CodeBase.Enemy
@@ -11,13 +8,12 @@ namespace CodeBase.Enemy
   [RequireComponent(typeof(EnemyAnimator))]
   public class Attack : MonoBehaviour
   {
-    [SerializeField] private float _damage = 10f;
+    public float Damage = 10f;
     public EnemyAnimator Animator;
     public float AttackCooldown = 3f;
     public float Cleavage = 0.5f;
     public float EffectiveDistance = 0.5f;
 
-    private IGameFactory _gameFactory;
     private Transform _heroTransform;
     private float _attackCooldown;
 
@@ -30,12 +26,11 @@ namespace CodeBase.Enemy
     private bool _attackIsActive;
 
 
-    private void Awake()
-    {
-      _gameFactory = AllServices.Container.Single<IGameFactory>();
+    public void Construct(Transform heroTransform) => 
+      _heroTransform = heroTransform;
+
+    private void Awake() => 
       _layerMask = 1 << LayerMask.NameToLayer("Player");
-      _gameFactory.HeroCreated += OnHeroCreated;
-    }
 
     private void Update()
     {
@@ -53,7 +48,7 @@ namespace CodeBase.Enemy
       if (Hit(out Collider hit))
       {
         PhysicsDebug.DrawDebug(StartPoint(), Cleavage, 1 );
-        hit.transform.GetComponent<IHealth>().TakeDamage(_damage);
+        hit.transform.GetComponent<IHealth>().TakeDamage(Damage);
       }
       
     }
@@ -100,7 +95,5 @@ namespace CodeBase.Enemy
     private bool CanAttack() => 
       _attackIsActive && !_isAttacking && _attackCooldown <= 0;
 
-    private void OnHeroCreated() => 
-      _heroTransform = _gameFactory.HeroGameObject.transform;
   }
 }

@@ -105,6 +105,8 @@ MonoBehaviour:
   _shotFx: {fileID: 8300000, guid: 48fa33adfa011bd458b24b22080d9a8b, type: 3}
   _audioSource: {fileID: 4195515815427901379}
   _muzzleFlash: {fileID: 1446565718097121535}
+  _bulletTrail: {fileID: 1462353402186173558, guid: cbc5ec771fbdbab4280cfc79c1481206, type: 3}
+  _bulletSpeed: 100
   _camera: {fileID: 0}
 --- !u!82 &4195515815427901379
 AudioSource:

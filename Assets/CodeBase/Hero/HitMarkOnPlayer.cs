@@ -11,7 +11,7 @@ namespace CodeBase.Hero
     public void ShowHit()
     {
       _hitMarkOnPlayer.alpha = 0.8f;
-      _hitMarkOnPlayer.DOFade(0f, 1f);
+      _hitMarkOnPlayer.DOFade(0f, 0.5f);
     }
 
     public void ShowDeath()

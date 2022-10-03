@@ -1,5 +1,5 @@
 using CodeBase.Infrastructure.Factory;
-using CodeBase.Infrastructure.Services;
+using CodeBase.Services;
 using UnityEngine;
 using UnityEngine.AI;
 
@@ -10,26 +10,11 @@ namespace CodeBase.Enemy
     public float Speed;
     
     private Transform _heroTransform;
-    private IGameFactory _gameFactory;
     private Vector3 _positionToLook;
-
-
-    private void Start()
-    {
-      _gameFactory = AllServices.Container.Single<IGameFactory>();
-
-      if (HeroExists())
-        InitializeHeroTransform();
-      else
-        _gameFactory.HeroCreated += InitializeHeroTransform;
-    }
-
-    private bool HeroExists() => 
-      _gameFactory.HeroGameObject != null;
-
-    private void InitializeHeroTransform() => 
-      _heroTransform = _gameFactory.HeroGameObject.transform;
-
+    
+    public void Construct(Transform heroTransform) => 
+      _heroTransform = heroTransform;
+    
     private void Update()
     {
       if (Initialized())

@@ -1,5 +1,4 @@
-﻿using System;
-using CodeBase.Hero;
+﻿using CodeBase.Hero;
 using CodeBase.Hero.PlayerController;
 using CodeBase.Logic;
 using UnityEngine;
@@ -15,26 +14,12 @@ namespace CodeBase.UI
     private IHealth _playerHealth;
     private PlayerMover _playerMover;
     private bool _isDead;
-
-    private void Start()
-    {
-      IHealth health = GetComponent<IHealth>();
-      
-      if (health != null)
-        Construct(health);
-        
-    }
+    
 
     private void OnDestroy() => 
       _playerHealth.HealthChanged -= UpdateHPBar;
 
-    private void Construct(IHealth health)
-    {
-      _playerHealth = health;
-      _playerHealth.HealthChanged += UpdateHPBar;
-      _playerHealth.HealthChanged += PlayDeath;
-      _playerHealth.TookDamage += ShowMark;
-    }
+    
     public void Construct(IHealth health, PlayerMover mover)
     {
       _playerHealth = health;

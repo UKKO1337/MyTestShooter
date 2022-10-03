@@ -1,7 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
-using CodeBase.Infrastructure.Services;
-using CodeBase.Infrastructure.Services.PersistentProgress;
+using CodeBase.Logic;
+using CodeBase.Services;
+using CodeBase.Services.PersistentProgress;
 using UnityEngine;
 
 namespace CodeBase.Infrastructure.Factory
@@ -13,12 +14,8 @@ namespace CodeBase.Infrastructure.Factory
     List<ISavedProgressReader> ProgressReaders { get; }
     List<ISavedProgress> ProgressWriters { get; }
     
-    GameObject HeroGameObject { get; }
-    GameObject HUDGameObject { get; }
-
-    event Action HeroCreated;
-    event Action HUDCreated;
     void Cleanup();
     void Register(ISavedProgressReader progressReader);
+    GameObject CreateZombie(ZombieTypeId typeId, Transform parent);
   }
 }

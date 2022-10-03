@@ -1,6 +1,4 @@
-﻿using System;
-using CodeBase.Hero.PlayerController;
-using CodeBase.UI;
+﻿using CodeBase.Hero.PlayerController;
 using UnityEngine;
 
 namespace CodeBase.Hero
@@ -13,7 +11,6 @@ namespace CodeBase.Hero
     [SerializeField] private PlayerMover _mover;
     [SerializeField] private PlayerCrouching _crouching;
     [SerializeField] private PlayerJumper _jumper;
-    [SerializeField] private HitMarkOnPlayer _marker;
     [SerializeField] private CameraMover _camera;
 
     private bool _isDead;
@@ -37,9 +34,10 @@ namespace CodeBase.Hero
       _mover.enabled = false;
       _crouching.enabled = false;
       _jumper.enabled = false;
-      _shoot.enabled = false;
       _camera.DeathAnimation();
       _camera.enabled = false;
+      _shoot.DeathAnimation();
+      _shoot.enabled = false;
     }
   }
 }

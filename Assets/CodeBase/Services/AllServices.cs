@@ -1,6 +1,4 @@
-﻿using CodeBase.Infrastructure.Factory;
-
-namespace CodeBase.Infrastructure.Services
+﻿namespace CodeBase.Services
 {
   public class AllServices
   {

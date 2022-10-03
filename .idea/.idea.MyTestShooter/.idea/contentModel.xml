@@ -70,24 +70,6 @@
             <e p="IGameState.cs" t="Include" />
             <e p="LoadingCurtain.cs" t="Include" />
             <e p="SceneLoader.cs" t="Include" />
-            <e p="Services" t="Include">
-              <e p="AllServices.cs" t="Include" />
-              <e p="Input" t="Include">
-                <e p="IInputService.cs" t="Include" />
-                <e p="InputService.cs" t="Include" />
-                <e p="PlayerInput.cs" t="Include" />
-              </e>
-              <e p="IService.cs" t="Include" />
-              <e p="PersistentProgress" t="Include">
-                <e p="IPersistentProgressService.cs" t="Include" />
-                <e p="ISavedProgress.cs" t="Include" />
-                <e p="PersistentProgressService.cs" t="Include" />
-              </e>
-              <e p="SaveLoad" t="Include">
-                <e p="ISaveLoadService.cs" t="Include" />
-                <e p="SaveLoadService.cs" t="Include" />
-              </e>
-            </e>
             <e p="States" t="Include">
               <e p="BootstrapState.cs" t="Include" />
               <e p="GameLoopState.cs" t="Include" />
@@ -104,6 +86,26 @@
             <e p="IHealth.cs" t="Include" />
             <e p="SaveTrigger.cs" t="Include" />
             <e p="UniqueId.cs" t="Include" />
+            <e p="ZombieTypeId.cs" t="Include" />
+          </e>
+          <e p="Services" t="Include">
+            <e p="AllServices.cs" t="Include" />
+            <e p="Input" t="Include">
+              <e p="IInputService.cs" t="Include" />
+              <e p="InputService.cs" t="Include" />
+              <e p="PlayerInput.cs" t="Include" />
+            </e>
+            <e p="IService.cs" t="Include" />
+            <e p="IStaticDataService.cs" t="Include" />
+            <e p="PersistentProgress" t="Include">
+              <e p="IPersistentProgressService.cs" t="Include" />
+              <e p="ISavedProgress.cs" t="Include" />
+              <e p="PersistentProgressService.cs" t="Include" />
+            </e>
+            <e p="SaveLoad" t="Include">
+              <e p="ISaveLoadService.cs" t="Include" />
+              <e p="SaveLoadService.cs" t="Include" />
+            </e>
           </e>
           <e p="UI" t="Include">
             <e p="ActorUI.cs" t="Include" />
@@ -186,6 +188,10 @@
                 <e p="CFX_SpawnSystem.cs" t="Include" />
               </e>
             </e>
+          </e>
+          <e p="StaticData" t="Include">
+            <e p="StaticDataService.cs" t="Include" />
+            <e p="ZombieStaticData.cs" t="Include" />
           </e>
         </e>
       </e>

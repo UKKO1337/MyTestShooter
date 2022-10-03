@@ -1,6 +1,6 @@
 ﻿using System;
-using CodeBase.Infrastructure.Services;
-using CodeBase.Infrastructure.Services.SaveLoad;
+using CodeBase.Services;
+using CodeBase.Services.SaveLoad;
 using UnityEngine;
 
 namespace CodeBase.Logic

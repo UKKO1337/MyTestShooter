@@ -1,6 +1,6 @@
 using System;
-using CodeBase.Infrastructure.Services;
-using CodeBase.Infrastructure.Services.Input;
+using CodeBase.Services;
+using CodeBase.Services.Input;
 using UnityEngine;
 using DG.Tweening;
 

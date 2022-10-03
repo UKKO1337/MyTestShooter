@@ -1,6 +1,7 @@
-using CodeBase.Infrastructure.Services;
-using CodeBase.Infrastructure.Services.Input;
+using System.Collections;
 using CodeBase.Logic;
+using CodeBase.Services;
+using CodeBase.Services.Input;
 using UnityEngine;
 using DG.Tweening;
 
@@ -17,8 +18,9 @@ namespace CodeBase.Hero
     [SerializeField] private AudioClip _shotFx;
     [SerializeField] private AudioSource _audioSource;
     [SerializeField] private ParticleSystem _muzzleFlash;
-    
-    [SerializeField] private Transform _camera;
+    [SerializeField] private TrailRenderer _bulletTrail;
+    [SerializeField] private float _bulletSpeed = 100f;
+    [SerializeField] private Camera _camera;
 
     private IInputService _inputService;
     private int _layerMask;
@@ -31,8 +33,14 @@ namespace CodeBase.Hero
 
     private void Update()
     {
-      Debug.DrawRay(_camera.position, _camera.forward, Color.red);
+      Debug.DrawRay(_camera.transform.position, _camera.transform.forward, Color.red);
       PerformShoot();
+    }
+
+    public void DeathAnimation()
+    {
+      Vector3 hideWeapon = new Vector3(90f, transform.rotation.y, transform.rotation.z);
+      transform.DOLocalRotate(hideWeapon, 2);
     }
 
 
@@ -46,18 +54,46 @@ namespace CodeBase.Hero
 
         RaycastHit hit;
         
-        if (Physics.Raycast(_camera.position, _camera.forward, out hit, _range, _layerMask))
+        if (Physics.Raycast(_camera.transform.position, _camera.transform.forward, out hit, _range, _layerMask))
         {
           IHealth health = hit.collider.GetComponent<IHealth>();
           
-          if (health != null)
-          {
+          if (health != null) 
             health.TakeDamage(_damage);
-            Debug.Log("You hit " + hit.collider.name);
-          }
+          
+          TrailRenderer trail = Instantiate(_bulletTrail, _bulletSpawnPosition.position, Quaternion.identity);
+          StartCoroutine(SpawnTrail(trail: trail, point: hit.point));
         }
+
+        else 
+        {
+          TrailRenderer trail = Instantiate(_bulletTrail, _bulletSpawnPosition.position, Quaternion.identity);
+          StartCoroutine(SpawnTrail(trail: trail, point: _camera.transform.forward * 100f));
+        }
+        
+        
       }
       
+    }
+
+    private IEnumerator SpawnTrail(TrailRenderer trail, Vector3 point)
+    {
+      Vector3 startPosition = trail.transform.position;
+      float distance = Vector3.Distance(trail.transform.position, point);
+      float remainingDistance = distance;
+
+      while (remainingDistance > 0)
+      {
+        trail.transform.position = Vector3.Lerp(startPosition, point, 1 - (remainingDistance / distance));
+
+        remainingDistance -= _bulletSpeed * Time.deltaTime;
+
+        yield return null;
+      }
+      
+      trail.transform.position = point;
+
+      Destroy(trail.gameObject, trail.time);
     }
 
     private void ShootRecoil()

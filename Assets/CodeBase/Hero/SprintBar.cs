@@ -13,6 +13,7 @@ namespace CodeBase.Hero
         [SerializeField] private Image _sprintBar;
         [SerializeField] private PlayerMover _playerMover;
         [SerializeField] private CanvasGroup _sprintBarCG;
+        
         private float _sprintBarWidth;
         private float _sprintBarHeight;
         private float _sprintBarHeightPercent = .015f;
