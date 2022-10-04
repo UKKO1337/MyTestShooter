@@ -4,7 +4,7 @@ using CodeBase.Services;
 using CodeBase.Services.Input;
 using CodeBase.Services.PersistentProgress;
 using CodeBase.Services.SaveLoad;
-using Resources.StaticData;
+using CodeBase.StaticData;
 
 namespace CodeBase.Infrastructure.States
 {
@@ -48,7 +48,7 @@ namespace CodeBase.Infrastructure.States
       _services.RegisterSingle<IAssets>(new AssetProvider());
       _services.RegisterSingle<IPersistentProgressService>(new PersistentProgressService());
       _services.RegisterSingle<IGameFactory>(new GameFactory(_services.Single<IAssets>(),
-        _services.Single<IStaticDataService>()));
+        _services.Single<IStaticDataService>(), _services.Single<IInputService>()));
       _services.RegisterSingle<ISaveLoadService>(new SaveLoadService(_services.Single<IPersistentProgressService>(),
         _services.Single<IGameFactory>()));
     }

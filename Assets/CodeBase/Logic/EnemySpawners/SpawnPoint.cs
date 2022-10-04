@@ -1,30 +1,26 @@
-﻿using System;
-using CodeBase.Data;
+﻿using CodeBase.Data;
 using CodeBase.Enemy;
 using CodeBase.Infrastructure.Factory;
-using CodeBase.Services;
 using CodeBase.Services.PersistentProgress;
 using UnityEngine;
 
-namespace CodeBase.Logic
+namespace CodeBase.Logic.EnemySpawners
 {
-  public class EnemySpawner : MonoBehaviour, ISavedProgress
+  public class SpawnPoint : MonoBehaviour, ISavedProgress
   {
-    [SerializeField] private ZombieTypeId _zombieTypeId;
-    [SerializeField] private bool _slain;
-    private string _id;
-    private IGameFactory _factory;
+    public ZombieTypeId ZombieTypeId;
+    private bool _slain;
+    public string Id { get; set; }
+    
+    private IGameFactory _gameFactory;
     private EnemyDeath _enemyDeath;
 
-    private void Awake()
-    {
-      _id = GetComponent<UniqueId>().Id;
-      _factory = AllServices.Container.Single<IGameFactory>();
-    }
+    public void Construct(IGameFactory factory) =>
+      _gameFactory = factory;
 
     public void LoadProgress(PlayerProgress progress)
     {
-      if (progress.KillData.ClearedSpawners.Contains(_id))
+      if (progress.KillData.ClearedSpawners.Contains(Id))
         _slain = true;
       else
         Spawn();
@@ -33,13 +29,13 @@ namespace CodeBase.Logic
     public void UpdateProgress(PlayerProgress progress)
     {
       if(_slain)
-        progress.KillData.ClearedSpawners.Add(_id);
+        progress.KillData.ClearedSpawners.Add(Id);
       
     }
 
     private void Spawn()
     {
-      GameObject zombie = _factory.CreateZombie(_zombieTypeId, transform);
+      GameObject zombie = _gameFactory.CreateZombie(ZombieTypeId, transform);
       _enemyDeath = zombie.GetComponent<EnemyDeath>();
       _enemyDeath.Happend += Slay;
     }
@@ -51,5 +47,6 @@ namespace CodeBase.Logic
       
       _slain = true;
     }
+    
   }
 }

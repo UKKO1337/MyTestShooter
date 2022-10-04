@@ -18,14 +18,22 @@ namespace CodeBase.Hero.PlayerController
       private PlayerMover _playerMover;
       private float _zoomStepTime = 10f;
       private float _sprintFov = 120f;
+
       private float _sprintZoomStepTime = 10f;
+
       private float _xRotation;
+
       private IInputService _inputService;
+
+      public void Construct(IInputService inputService, PlayerMover playerMover)
+      {
+         _inputService = inputService;
+         _playerMover = playerMover;
+      }
 
       private void Awake()
       {
          Cursor.lockState = CursorLockMode.Locked;
-         _inputService = AllServices.Container.Single<IInputService>();
          _playerMover = GetComponentInParent<PlayerMover>();
          _camera.fieldOfView = _fov;
       }
@@ -85,6 +93,5 @@ namespace CodeBase.Hero.PlayerController
          _player.Rotate(mouseAxisX * new Vector3(0, 1, 0));
          transform.localRotation = Quaternion.Euler(_xRotation,0,0);
       }
-      
    }
 }

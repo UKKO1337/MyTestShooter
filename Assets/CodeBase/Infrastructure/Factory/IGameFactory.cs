@@ -11,11 +11,11 @@ namespace CodeBase.Infrastructure.Factory
   {
     public GameObject CreateHero(GameObject at);
     public GameObject CreateHUD();
+    GameObject CreateZombie(ZombieTypeId typeId, Transform parent);
+    void CreateSpawner(Vector3 at, string spawnerId, ZombieTypeId zombieTypeId);
     List<ISavedProgressReader> ProgressReaders { get; }
     List<ISavedProgress> ProgressWriters { get; }
-    
+
     void Cleanup();
-    void Register(ISavedProgressReader progressReader);
-    GameObject CreateZombie(ZombieTypeId typeId, Transform parent);
   }
 }

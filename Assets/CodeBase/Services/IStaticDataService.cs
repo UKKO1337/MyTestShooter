@@ -1,5 +1,5 @@
 ﻿using CodeBase.Logic;
-using Resources.StaticData;
+using CodeBase.StaticData;
 
 namespace CodeBase.Services
 {
@@ -7,5 +7,6 @@ namespace CodeBase.Services
   {
     void LoadZombies();
     ZombieStaticData ForZombie(ZombieTypeId typeId);
+    LevelStaticData ForLevel(string sceneKey);
   }
 }

@@ -9,13 +9,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1fac78f14b634b6d8b10fb4324058769, type: 3}
-  m_Name: ZombieData
+  m_Script: {fileID: 11500000, guid: 2ec01663ac044b98b05591db11a7a927, type: 3}
+  m_Name: ConstructionSite
   m_EditorClassIdentifier: 
-  ZombieTypeId: 0
-  Hp: 50
-  Damage: 10
-  EffectiveDistance: 0.666
-  Cleavage: 0.5
-  MoveSpeed: 5
-  Prefab: {fileID: 4493914613880827488, guid: 6dc4cf4496348884d8ee27743ae38562, type: 3}
+  LevelKey: 
+  EnemySpawners: []

@@ -1,12 +1,14 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using CodeBase.Enemy;
+using CodeBase.Hero;
+using CodeBase.Hero.PlayerController;
 using CodeBase.Infrastructure.AssetManagement;
 using CodeBase.Logic;
+using CodeBase.Logic.EnemySpawners;
 using CodeBase.Services;
+using CodeBase.Services.Input;
 using CodeBase.Services.PersistentProgress;
-using CodeBase.UI;
-using Resources.StaticData;
+using CodeBase.StaticData;
 using UnityEngine;
 using UnityEngine.AI;
 using Object = UnityEngine.Object;
@@ -17,15 +19,20 @@ namespace CodeBase.Infrastructure.Factory
   {
     private readonly IAssets _asset;
     private readonly IStaticDataService _staticData;
+    private readonly IInputService _inputService;
 
     public List<ISavedProgressReader> ProgressReaders { get; } = new List<ISavedProgressReader>();
-    public List<ISavedProgress> ProgressWriters { get; } = new List<ISavedProgress>();
-    private GameObject HeroGameObject { get; set; }
-    private GameObject HUDGameObject { get; set; }
-    
 
-    public GameFactory(IAssets asset, IStaticDataService staticData)
+    public List<ISavedProgress> ProgressWriters { get; } = new List<ISavedProgress>();
+
+    private GameObject HeroGameObject { get; set; }
+
+    private GameObject HUDGameObject { get; set; }
+
+
+    public GameFactory(IAssets asset, IStaticDataService staticData, IInputService inputService)
     {
+      _inputService = inputService; 
       _asset = asset;
       _staticData = staticData;
     }
@@ -33,6 +40,16 @@ namespace CodeBase.Infrastructure.Factory
     public GameObject CreateHero(GameObject at)
     {
       HeroGameObject = InstantiateRegistered(AssetPath.HeroPath, at.transform.position);
+      
+      var playerMover = HeroGameObject.GetComponent<PlayerMover>();
+      playerMover.Construct(_inputService);
+      
+      HeroGameObject.GetComponent<PlayerJumper>().Construct(_inputService);
+      HeroGameObject.GetComponent<PlayerCrouching>().Construct(_inputService);
+      
+      HeroGameObject.GetComponentInChildren<CameraMover>().Construct(_inputService, playerMover);
+      HeroGameObject.GetComponentInChildren<Shoot>().Construct(_inputService);
+      
       return HeroGameObject;
     }
 
@@ -63,6 +80,16 @@ namespace CodeBase.Infrastructure.Factory
       zombie.GetComponent<RotateToPlayer>()?.Construct(HeroGameObject.transform);
 
       return zombie;
+    }
+
+    public void CreateSpawner(Vector3 at, string spawnerId, ZombieTypeId zombieTypeId)
+    {
+      SpawnPoint spawner = InstantiateRegistered(AssetPath.Spawner, at)
+        .GetComponent<SpawnPoint>();
+      
+      spawner.Construct(this);
+      spawner.Id = spawnerId;
+      spawner.ZombieTypeId = zombieTypeId;
     }
 
     private GameObject InstantiateRegistered(string prefabPath, Vector3 at)

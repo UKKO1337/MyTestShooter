@@ -20,6 +20,7 @@
           </e>
           <e p="Editor" t="Include">
             <e p="EnemySpawnerEditor.cs" t="Include" />
+            <e p="LevelStaticDataEditor.cs" t="Include" />
             <e p="Tools.cs" t="Include" />
             <e p="UniqueIdEditor.cs" t="Include" />
           </e>
@@ -81,7 +82,10 @@
           <e p="Logic" t="Include">
             <e p="AnimatorState.cs" t="Include" />
             <e p="AnimatorStateReporter.cs" t="Include" />
-            <e p="EnemySpawner.cs" t="Include" />
+            <e p="EnemySpawners" t="Include">
+              <e p="SpawnMarker.cs" t="Include" />
+              <e p="SpawnPoint.cs" t="Include" />
+            </e>
             <e p="IAnimationStateReader.cs" t="Include" />
             <e p="IHealth.cs" t="Include" />
             <e p="SaveTrigger.cs" t="Include" />
@@ -106,6 +110,12 @@
               <e p="ISaveLoadService.cs" t="Include" />
               <e p="SaveLoadService.cs" t="Include" />
             </e>
+          </e>
+          <e p="StaticData" t="Include">
+            <e p="EnemySpawnerData.cs" t="Include" />
+            <e p="LevelStaticData.cs" t="Include" />
+            <e p="StaticDataService.cs" t="Include" />
+            <e p="ZombieStaticData.cs" t="Include" />
           </e>
           <e p="UI" t="Include">
             <e p="ActorUI.cs" t="Include" />
@@ -188,10 +198,6 @@
                 <e p="CFX_SpawnSystem.cs" t="Include" />
               </e>
             </e>
-          </e>
-          <e p="StaticData" t="Include">
-            <e p="StaticDataService.cs" t="Include" />
-            <e p="ZombieStaticData.cs" t="Include" />
           </e>
         </e>
       </e>

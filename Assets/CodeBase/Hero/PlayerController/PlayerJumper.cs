@@ -12,17 +12,17 @@ namespace CodeBase.Hero.PlayerController
     private IInputService _inputService;
 
     private bool _isGrounded;
-    
 
-    private void Awake() => 
-      _inputService = AllServices.Container.Single<IInputService>();
+
+    public void Construct(IInputService inputService) => 
+      _inputService = inputService;
 
     private void Update()
     {
       CheckGround();
       Jump();
     }
-    
+
     private void Jump()
     {
       if (_isGrounded && _inputService.IsJumpButtonPressed())

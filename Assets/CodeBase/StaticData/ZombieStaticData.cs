@@ -1,7 +1,7 @@
 ﻿using CodeBase.Logic;
 using UnityEngine;
 
-namespace Resources.StaticData
+namespace CodeBase.StaticData
 {
   [CreateAssetMenu(fileName = "ZombieData", menuName = "StaticData/Zombie")]
   public class ZombieStaticData : ScriptableObject

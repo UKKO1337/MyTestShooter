@@ -10,11 +10,11 @@ namespace CodeBase.Hero.PlayerController
     private Vector3 _originalScale;
     private float _crouchHeight = 0.75f;
 
-    private void Awake()
-    {
-      _inputService = AllServices.Container.Single<IInputService>();
+    public void Construct(IInputService inputService) => 
+      _inputService = inputService;
+
+    private void Awake() => 
       _originalScale = transform.localScale;
-    }
 
     private void Update()
     {

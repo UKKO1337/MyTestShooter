@@ -25,17 +25,14 @@ namespace CodeBase.Hero
     private IInputService _inputService;
     private int _layerMask;
 
-    private void Awake()
-    {
-      _inputService = AllServices.Container.Single<IInputService>();
-      _layerMask = 1 << LayerMask.NameToLayer("Hittable");
-    }
+    public void Construct(IInputService inputService) => 
+      _inputService = inputService;
 
-    private void Update()
-    {
-      Debug.DrawRay(_camera.transform.position, _camera.transform.forward, Color.red);
+    private void Awake() => 
+      _layerMask = 1 << LayerMask.NameToLayer("Hittable");
+
+    private void Update() => 
       PerformShoot();
-    }
 
     public void DeathAnimation()
     {
@@ -52,9 +49,7 @@ namespace CodeBase.Hero
         _audioSource.PlayOneShot(_shotFx);
         ShootRecoil();
 
-        RaycastHit hit;
-        
-        if (Physics.Raycast(_camera.transform.position, _camera.transform.forward, out hit, _range, _layerMask))
+        if (Physics.Raycast(_camera.transform.position, _camera.transform.forward, out RaycastHit hit, _range, _layerMask))
         {
           IHealth health = hit.collider.GetComponent<IHealth>();
           

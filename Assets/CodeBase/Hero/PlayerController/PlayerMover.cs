@@ -22,14 +22,19 @@ namespace CodeBase.Hero.PlayerController
   private float _maxVelocityChange = 10f;
   private float _sprintCooldownTimer = 0.5f;
   private float _sprintCooldownReset;
+
   private bool _isSprintCooldown;
+
   private bool _isSprinting;
+
   private IInputService _inputService;
 
 
+  public void Construct(IInputService inputService) => 
+   _inputService = inputService;
+
   private void Awake()
   {
-   _inputService = AllServices.Container.Single<IInputService>();
    SprintRemaining = SprintDuration;
    _sprintCooldownReset = _sprintCooldownTimer;
   }
@@ -127,7 +132,7 @@ namespace CodeBase.Hero.PlayerController
    velocityChange.y = 0;
    return velocityChange;
   }
-  
+
   public void LoadProgress(PlayerProgress progress)
   {
    if (CurrentLevel() == progress.WorldData.PositionOnLevel.Level)
