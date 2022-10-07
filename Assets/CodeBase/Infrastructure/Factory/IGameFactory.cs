@@ -9,7 +9,7 @@ namespace CodeBase.Infrastructure.Factory
 {
   public interface IGameFactory : IService
   {
-    public GameObject CreateHero(GameObject at);
+    public GameObject CreateHero(Vector3 at);
     public GameObject CreateHUD();
     GameObject CreateZombie(ZombieTypeId typeId, Transform parent);
     void CreateSpawner(Vector3 at, string spawnerId, ZombieTypeId zombieTypeId);

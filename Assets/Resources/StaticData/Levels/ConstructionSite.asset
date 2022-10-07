@@ -12,5 +12,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2ec01663ac044b98b05591db11a7a927, type: 3}
   m_Name: ConstructionSite
   m_EditorClassIdentifier: 
-  LevelKey: 
-  EnemySpawners: []
+  LevelKey: Main
+  EnemySpawners:
+  - Id: Main_5a56c9a8-fe23-4b15-8e90-4b9b2cfe4dba
+    ZombieTypeId: 0
+    Position: {x: 14.09301, y: -0.087925434, z: 12.989209}
+  - Id: Main_544041f6-dabb-4274-96a2-6c48f236da0b
+    ZombieTypeId: 0
+    Position: {x: 15.462048, y: -0.08792353, z: 10.751019}
+  - Id: SpawnMarker_50fe9d70-311a-48e2-9bd2-f007c089914d
+    ZombieTypeId: 0
+    Position: {x: 15.59, y: -0.08792448, z: 12.58}
+  InitialPlayerPosition: {x: -3.851, y: 0.875, z: 11.49}

@@ -37,9 +37,9 @@ namespace CodeBase.Infrastructure.Factory
       _staticData = staticData;
     }
 
-    public GameObject CreateHero(GameObject at)
+    public GameObject CreateHero(Vector3 at)
     {
-      HeroGameObject = InstantiateRegistered(AssetPath.HeroPath, at.transform.position);
+      HeroGameObject = InstantiateRegistered(AssetPath.HeroPath, at);
       
       var playerMover = HeroGameObject.GetComponent<PlayerMover>();
       playerMover.Construct(_inputService);

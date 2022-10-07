@@ -9,7 +9,6 @@ TagManager:
   - LoadingCurtain
   - Wall
   - FxTemporaire
-  - EnemySpawner
   layers:
   - Default
   - TransparentFX
