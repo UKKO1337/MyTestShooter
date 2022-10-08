@@ -25,11 +25,12 @@ namespace CodeBase.Hero
     private IInputService _inputService;
     private int _layerMask;
 
-    public void Construct(IInputService inputService) => 
-      _inputService = inputService;
 
-    private void Awake() => 
+    private void Awake()
+    {
+      _inputService = AllServices.Container.Single<IInputService>();
       _layerMask = 1 << LayerMask.NameToLayer("Hittable");
+    }
 
     private void Update() => 
       PerformShoot();

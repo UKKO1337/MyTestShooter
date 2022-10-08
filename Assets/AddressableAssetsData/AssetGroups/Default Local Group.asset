@@ -16,7 +16,23 @@ MonoBehaviour:
   m_Data:
     m_SerializedData: []
   m_GUID: e34d2bb020847e040842d56216cb0aea
-  m_SerializeEntries: []
+  m_SerializeEntries:
+  - m_GUID: 6dc4cf4496348884d8ee27743ae38562
+    m_Address: Zombie1
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 5d98dc5698726744ab51021e4b6ea7b4
+    m_Address: SpawnPoint
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 71f668dae2d477f4fbe840fa079f3063
+    m_Address: Hero
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 725140000d294fc418034b9eab5e9657
+    m_Address: HUD
+    m_ReadOnly: 0
+    m_SerializedLabels: []
   m_ReadOnly: 0
   m_Settings: {fileID: 11400000, guid: bc9ad891b3a8a474ebc21a21a4b1634f, type: 2}
   m_SchemaSet:

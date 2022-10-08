@@ -33,9 +33,9 @@ namespace CodeBase.Logic.EnemySpawners
       
     }
 
-    private void Spawn()
+    private async void Spawn()
     {
-      GameObject zombie = _gameFactory.CreateZombie(ZombieTypeId, transform);
+      GameObject zombie = await _gameFactory.CreateZombie(ZombieTypeId, transform);
       _enemyDeath = zombie.GetComponent<EnemyDeath>();
       _enemyDeath.Happend += Slay;
     }

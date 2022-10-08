@@ -30,13 +30,11 @@ namespace CodeBase.Hero.PlayerController
   private IInputService _inputService;
 
 
-  public void Construct(IInputService inputService) => 
-   _inputService = inputService;
-
   private void Awake()
   {
    SprintRemaining = SprintDuration;
    _sprintCooldownReset = _sprintCooldownTimer;
+   _inputService = AllServices.Container.Single<IInputService>();
   }
 
   private void Update()
@@ -60,11 +58,8 @@ namespace CodeBase.Hero.PlayerController
    if (_inputService.IsSprintButtonPressed() && SprintRemaining > 0f && !_isSprintCooldown)
     Sprint(moveDirection);
    else
-   {
-    //OnPlayerSprintEnd?.Invoke();
     Walk(moveDirection);
-   }
-    
+
   }
 
   private void Walk(Vector3 moveDirection)

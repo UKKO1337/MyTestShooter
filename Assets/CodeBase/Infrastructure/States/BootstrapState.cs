@@ -45,12 +45,19 @@ namespace CodeBase.Infrastructure.States
       RegisterStaticData();
       
       _services.RegisterSingle<IInputService>(new InputService());
-      _services.RegisterSingle<IAssets>(new AssetProvider());
+      RegisterAssetProvider();
       _services.RegisterSingle<IPersistentProgressService>(new PersistentProgressService());
       _services.RegisterSingle<IGameFactory>(new GameFactory(_services.Single<IAssets>(),
         _services.Single<IStaticDataService>(), _services.Single<IInputService>()));
       _services.RegisterSingle<ISaveLoadService>(new SaveLoadService(_services.Single<IPersistentProgressService>(),
         _services.Single<IGameFactory>()));
+    }
+
+    private void RegisterAssetProvider()
+    {
+      AssetProvider assetProvider = new AssetProvider();
+      assetProvider.Initialize();
+      _services.RegisterSingle<IAssets>(assetProvider);
     }
 
     private void RegisterStaticData()

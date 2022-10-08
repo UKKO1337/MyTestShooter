@@ -54,9 +54,9 @@
           </e>
           <e p="Infrastructure" t="Include">
             <e p="AssetManagement" t="Include">
-              <e p="AssetPath.cs" t="Include" />
               <e p="AssetProvider.cs" t="Include" />
-              <e p="IAssetProvider.cs" t="Include" />
+              <e p="AssetsAddress.cs" t="Include" />
+              <e p="IAssets.cs" t="Include" />
             </e>
             <e p="Factory" t="Include">
               <e p="GameFactory.cs" t="Include" />
@@ -77,6 +77,7 @@
               <e p="GameStateMachine.cs" t="Include" />
               <e p="LoadLevelState.cs" t="Include" />
               <e p="LoadProgressState.cs" t="Include" />
+              <e p="MainMenuState.cs" t="Include" />
             </e>
           </e>
           <e p="Logic" t="Include">

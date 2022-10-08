@@ -1,4 +1,5 @@
-﻿using CodeBase.Services;
+﻿using System;
+using CodeBase.Services;
 using CodeBase.Services.Input;
 using UnityEngine;
 
@@ -14,8 +15,8 @@ namespace CodeBase.Hero.PlayerController
     private bool _isGrounded;
 
 
-    public void Construct(IInputService inputService) => 
-      _inputService = inputService;
+    private void Awake() => 
+      _inputService = AllServices.Container.Single<IInputService>();
 
     private void Update()
     {

@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Threading.Tasks;
 using CodeBase.Enemy;
 using CodeBase.Hero;
 using CodeBase.Hero.PlayerController;
@@ -37,41 +38,39 @@ namespace CodeBase.Infrastructure.Factory
       _staticData = staticData;
     }
 
-    public GameObject CreateHero(Vector3 at)
+    public async Task WarmUp()
     {
-      HeroGameObject = InstantiateRegistered(AssetPath.HeroPath, at);
-      
-      var playerMover = HeroGameObject.GetComponent<PlayerMover>();
-      playerMover.Construct(_inputService);
-      
-      HeroGameObject.GetComponent<PlayerJumper>().Construct(_inputService);
-      HeroGameObject.GetComponent<PlayerCrouching>().Construct(_inputService);
-      
-      HeroGameObject.GetComponentInChildren<CameraMover>().Construct(_inputService, playerMover);
-      HeroGameObject.GetComponentInChildren<Shoot>().Construct(_inputService);
-      
+      await _asset.Load<GameObject>(AssetsAddress.Spawner);
+    }
+
+    public async Task<GameObject> CreateHero(Vector3 at)
+    {
+      HeroGameObject = await InstantiateRegisteredAsync(AssetsAddress.HeroPath, at);
       return HeroGameObject;
     }
 
-    public GameObject CreateHUD()
+    public async Task<GameObject> CreateHUD()
     {
-      HUDGameObject = InstantiateRegistered(AssetPath.HUD);
+      HUDGameObject = await InstantiateRegisteredAsync(AssetsAddress.HUD);
       return HUDGameObject;
     }
 
-    public GameObject CreateZombie(ZombieTypeId typeId, Transform parent)
+    public async Task<GameObject> CreateZombie(ZombieTypeId typeId, Transform parent)
     {
       ZombieStaticData zombieData = _staticData.ForZombie(typeId);
-      GameObject zombie = Object.Instantiate(zombieData.Prefab, parent.position, Quaternion.identity, parent);
+
+      GameObject prefab = await _asset.Load<GameObject>(zombieData.prefabReference);
       
-      var health = zombie.GetComponent<IHealth>();
+      GameObject zombie = Object.Instantiate(prefab, parent.position, Quaternion.identity, parent);
+      
+      IHealth health = zombie.GetComponent<IHealth>();
       health.Current = zombieData.Hp;
       health.Max = zombieData.Hp;
       
       zombie.GetComponent<AgentMoveToPlayer>().Construct(HeroGameObject.transform);
       zombie.GetComponent<NavMeshAgent>().speed = zombieData.MoveSpeed;
       
-      var attack = zombie.GetComponent<Attack>();
+      Attack attack = zombie.GetComponent<Attack>();
       attack.Construct(HeroGameObject.transform);
       attack.Damage = zombieData.Damage;
       attack.Cleavage = zombieData.Cleavage;
@@ -82,9 +81,10 @@ namespace CodeBase.Infrastructure.Factory
       return zombie;
     }
 
-    public void CreateSpawner(Vector3 at, string spawnerId, ZombieTypeId zombieTypeId)
+    public async Task CreateSpawner(Vector3 at, string spawnerId, ZombieTypeId zombieTypeId)
     {
-      SpawnPoint spawner = InstantiateRegistered(AssetPath.Spawner, at)
+      GameObject prefab = await _asset.Load<GameObject>(AssetsAddress.Spawner);
+      SpawnPoint spawner = InstantiateRegistered(prefab, at)
         .GetComponent<SpawnPoint>();
       
       spawner.Construct(this);
@@ -92,16 +92,23 @@ namespace CodeBase.Infrastructure.Factory
       spawner.ZombieTypeId = zombieTypeId;
     }
 
-    private GameObject InstantiateRegistered(string prefabPath, Vector3 at)
+    private GameObject InstantiateRegistered(GameObject prefab, Vector3 at)
     {
-      GameObject gameObject = _asset.Instantiate(prefabPath, at);
+      GameObject gameObject = Object.Instantiate(prefab, at, Quaternion.identity);
       RegisterProgressWatchers(gameObject);
       return gameObject;
     }
 
-    private GameObject InstantiateRegistered(string prefabPath)
+    private async Task<GameObject> InstantiateRegisteredAsync(string prefabPath, Vector3 at)
     {
-      GameObject gameObject = _asset.Instantiate(prefabPath);
+      GameObject gameObject = await _asset.Instantiate(prefabPath, at);
+      RegisterProgressWatchers(gameObject);
+      return gameObject;
+    }
+
+    private async Task<GameObject> InstantiateRegisteredAsync(string prefabPath)
+    {
+      GameObject gameObject = await _asset.Instantiate(prefabPath);
       RegisterProgressWatchers(gameObject);
       return gameObject;
     }
@@ -110,6 +117,8 @@ namespace CodeBase.Infrastructure.Factory
     {
       ProgressReaders.Clear();
       ProgressWriters.Clear();
+      
+      _asset.CleanUp();
     }
 
     private void RegisterProgressWatchers(GameObject gameObject)

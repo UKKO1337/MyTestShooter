@@ -25,14 +25,10 @@ namespace CodeBase.Hero.PlayerController
 
       private IInputService _inputService;
 
-      public void Construct(IInputService inputService, PlayerMover playerMover)
-      {
-         _inputService = inputService;
-         _playerMover = playerMover;
-      }
 
       private void Awake()
       {
+         _inputService = AllServices.Container.Single<IInputService>();
          Cursor.lockState = CursorLockMode.Locked;
          _playerMover = GetComponentInParent<PlayerMover>();
          _camera.fieldOfView = _fov;
