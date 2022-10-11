@@ -35,12 +35,6 @@ namespace CodeBase.Hero
     private void Update() => 
       PerformShoot();
 
-    public void DeathAnimation()
-    {
-      Vector3 hideWeapon = new Vector3(90f, transform.rotation.y, transform.rotation.z);
-      transform.DOLocalRotate(hideWeapon, 2);
-    }
-
 
     private void PerformShoot()
     {
@@ -97,6 +91,12 @@ namespace CodeBase.Hero
       Vector3 recoil = new Vector3(-15f, transform.rotation.y, transform.rotation.z);
       Vector3 noRecoil = new Vector3(0, transform.rotation.y, transform.rotation.z);
       transform.DOLocalRotate(recoil, _fireRate).From(noRecoil).SetLoops(2, LoopType.Yoyo);
+    }
+
+    public void DeathAnimation()
+    {
+      Vector3 hideWeapon = new Vector3(90f, transform.rotation.y, transform.rotation.z);
+      transform.DOLocalRotate(hideWeapon, 2);
     }
   }
 }

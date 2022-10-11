@@ -1,11 +1,10 @@
-﻿using System;
-using CodeBase.Services;
+﻿using CodeBase.Services;
 using CodeBase.Services.SaveLoad;
 using UnityEngine;
 
 namespace CodeBase.Logic
 {
-  public class SaveTrigger : MonoBehaviour
+  public class SaveTrigger : MonoBehaviour, ISave
   {
     private ISaveLoadService _saveLoadService;
 
@@ -18,7 +17,7 @@ namespace CodeBase.Logic
 
     private void OnTriggerEnter(Collider other)
     {
-      _saveLoadService.SaveProgress();
+      SaveProgress();
       Debug.Log("Progress Saved.");
       gameObject.SetActive(false);
     }
@@ -31,5 +30,8 @@ namespace CodeBase.Logic
       Gizmos.color = new Color(30,200,30,130);
       Gizmos.DrawCube(transform.position + Collider.center, Collider.size);
     }
+
+    public void SaveProgress() => 
+      _saveLoadService.SaveProgress();
   }
 }

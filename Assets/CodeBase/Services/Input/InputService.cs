@@ -33,6 +33,9 @@ namespace CodeBase.Services.Input
     public bool IsShootButtonPressed() => 
       _playerInput.Player.Shoot.WasPressedThisFrame();
 
+    public bool IsSaveButtonPressed() => 
+      _playerInput.Player.Save.WasPressedThisFrame();
+
     public void Enable() =>
       _playerInput.Enable();
     

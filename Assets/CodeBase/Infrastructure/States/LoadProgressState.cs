@@ -5,7 +5,7 @@ using UnityEditor;
 
 namespace CodeBase.Infrastructure.States
 {
-  public class LoadProgressState : IGameState
+  public class LoadProgressState :  IGamePayloadedState<bool>
   {
     private readonly GameStateMachine _gameStateMachine;
     private readonly IPersistentProgressService _progressService;
@@ -18,21 +18,26 @@ namespace CodeBase.Infrastructure.States
       _saveLoadService = saveLoadService;
     }
 
+    public void Enter(bool isNewGame)
+    {
+      if (!isNewGame)
+        _progressService.Progress = NewProgress();
+      else
+        LoadProgress();
+      
+      _gameStateMachine.Enter<LoadLevelState, string>(_progressService.Progress.WorldData.PositionOnLevel.Level);
+    }
+
     public void Exit()
     {
       
     }
 
-    public void Enter()
-    {
-      LoadProgressOrInitNew();
-      _gameStateMachine.Enter<LoadLevelState, string>(_progressService.Progress.WorldData.PositionOnLevel.Level);
-    }
 
-    private void LoadProgressOrInitNew() =>
-      _progressService.Progress =
+    private void LoadProgress() =>
+      _progressService.Progress = 
         _saveLoadService.LoadProgress() 
-        ?? NewProgress();
+        ?? NewProgress(); 
 
     private PlayerProgress NewProgress()
     {

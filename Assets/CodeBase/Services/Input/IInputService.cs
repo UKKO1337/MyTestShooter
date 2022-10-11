@@ -13,8 +13,8 @@ namespace CodeBase.Services.Input
   bool IsCrouchButtonPressed();
   bool IsSprintButtonPressed();
   bool IsZoomButtonPressed();
-  
   bool IsShootButtonPressed();
+  bool IsSaveButtonPressed();
 
   void Enable();
   void Disable();

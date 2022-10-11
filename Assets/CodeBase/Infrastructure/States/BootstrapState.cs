@@ -14,9 +14,11 @@ namespace CodeBase.Infrastructure.States
     private readonly GameStateMachine _stateMachine;
     private readonly SceneLoader _sceneLoader;
     private readonly AllServices _services;
+    private readonly LoadingCurtain _curtain;
 
-    public BootstrapState(GameStateMachine stateMachine, SceneLoader sceneLoader, AllServices services)
+    public BootstrapState(GameStateMachine stateMachine, SceneLoader sceneLoader, AllServices services, LoadingCurtain curtain)
     {
+      _curtain = curtain;
       _stateMachine = stateMachine;
       _sceneLoader = sceneLoader;
       _services = services;
@@ -30,20 +32,21 @@ namespace CodeBase.Infrastructure.States
 
     public void Enter()
     {
+      _curtain.Show();
       _sceneLoader.Load(Initial, onLoaded: EnterLoadLevel);
     }
 
-    public void Exit()
-    {
-    }
+    public void Exit() => 
+      _curtain.Hide();
 
     private void EnterLoadLevel() =>
-      _stateMachine.Enter<LoadProgressState>();
+      _stateMachine.Enter<MainMenuState>();
 
     private void RegisterServices()
     {
       RegisterStaticData();
       
+      _services.RegisterSingle<IGameStateMachine>(_stateMachine);
       _services.RegisterSingle<IInputService>(new InputService());
       RegisterAssetProvider();
       _services.RegisterSingle<IPersistentProgressService>(new PersistentProgressService());

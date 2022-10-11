@@ -20,7 +20,6 @@ namespace CodeBase.Infrastructure.Factory
   {
     private readonly IAssets _asset;
     private readonly IStaticDataService _staticData;
-    private readonly IInputService _inputService;
 
     public List<ISavedProgressReader> ProgressReaders { get; } = new List<ISavedProgressReader>();
 
@@ -33,7 +32,6 @@ namespace CodeBase.Infrastructure.Factory
 
     public GameFactory(IAssets asset, IStaticDataService staticData, IInputService inputService)
     {
-      _inputService = inputService; 
       _asset = asset;
       _staticData = staticData;
     }
