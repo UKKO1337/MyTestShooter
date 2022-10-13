@@ -7743,6 +7743,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3ef2e8e0f6eae8344a6d466d7e7edc5a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _camera: {fileID: 711253921}
 --- !u!82 &711253923
 AudioSource:
   m_ObjectHideFlags: 0

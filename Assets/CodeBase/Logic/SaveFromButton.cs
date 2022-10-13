@@ -19,12 +19,9 @@ namespace CodeBase.Logic
 
     private void Update()
     {
-      if (_inputService.IsSaveButtonPressed())
-      {
+      if (_inputService.IsSaveButtonPressed()) 
         SaveProgress();
-        Debug.Log("Game saved");
-      }
-      
+
     }
 
     public void SaveProgress() => 

@@ -8,7 +8,7 @@ using CodeBase.StaticData;
 
 namespace CodeBase.Infrastructure.States
 {
-  public class BootstrapState : IGameState
+  public class BootstrapState : IGameState, IGamePayloadedState<bool>
   {
     private const string Initial = "Initial";
     private readonly GameStateMachine _stateMachine;
@@ -33,13 +33,22 @@ namespace CodeBase.Infrastructure.States
     public void Enter()
     {
       _curtain.Show();
+      _sceneLoader.Load(Initial, onLoaded: EnterMenu);
+    }
+
+    public void Enter(bool payload)
+    {
+      _curtain.Show();
       _sceneLoader.Load(Initial, onLoaded: EnterLoadLevel);
     }
+
+    private void EnterLoadLevel() => 
+      _stateMachine.Enter<LoadProgressState>();
 
     public void Exit() => 
       _curtain.Hide();
 
-    private void EnterLoadLevel() =>
+    private void EnterMenu() =>
       _stateMachine.Enter<MainMenuState>();
 
     private void RegisterServices()

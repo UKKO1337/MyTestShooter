@@ -15,6 +15,7 @@ namespace CodeBase.Services.Input
   bool IsZoomButtonPressed();
   bool IsShootButtonPressed();
   bool IsSaveButtonPressed();
+  bool IsLoadButtonPressed();
 
   void Enable();
   void Disable();

@@ -5,7 +5,7 @@ using UnityEditor;
 
 namespace CodeBase.Infrastructure.States
 {
-  public class LoadProgressState :  IGamePayloadedState<bool>
+  public class LoadProgressState :  IGamePayloadedState<bool>, IGameState
   {
     private readonly GameStateMachine _gameStateMachine;
     private readonly IPersistentProgressService _progressService;
@@ -31,6 +31,12 @@ namespace CodeBase.Infrastructure.States
     public void Exit()
     {
       
+    }
+
+    public void Enter()
+    {
+      LoadProgress();
+      _gameStateMachine.Enter<LoadLevelState, string>(_progressService.Progress.WorldData.PositionOnLevel.Level);
     }
 
 

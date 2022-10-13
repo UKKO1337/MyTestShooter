@@ -51,46 +51,19 @@ namespace CodeBase.Hero
           if (health != null) 
             health.TakeDamage(_damage);
           
-          TrailRenderer trail = Instantiate(_bulletTrail, _bulletSpawnPosition.position, Quaternion.identity);
-          StartCoroutine(SpawnTrail(trail: trail, point: hit.point));
         }
-
-        else 
-        {
-          TrailRenderer trail = Instantiate(_bulletTrail, _bulletSpawnPosition.position, Quaternion.identity);
-          StartCoroutine(SpawnTrail(trail: trail, point: _camera.transform.forward * 100f));
-        }
-        
         
       }
       
     }
-
-    private IEnumerator SpawnTrail(TrailRenderer trail, Vector3 point)
-    {
-      Vector3 startPosition = trail.transform.position;
-      float distance = Vector3.Distance(trail.transform.position, point);
-      float remainingDistance = distance;
-
-      while (remainingDistance > 0)
-      {
-        trail.transform.position = Vector3.Lerp(startPosition, point, 1 - (remainingDistance / distance));
-
-        remainingDistance -= _bulletSpeed * Time.deltaTime;
-
-        yield return null;
-      }
-      
-      trail.transform.position = point;
-
-      Destroy(trail.gameObject, trail.time);
-    }
+    
 
     private void ShootRecoil()
     {
-      Vector3 recoil = new Vector3(-15f, transform.rotation.y, transform.rotation.z);
+      Vector3 recoil = new Vector3(-10f, transform.rotation.y, transform.rotation.z);
       Vector3 noRecoil = new Vector3(0, transform.rotation.y, transform.rotation.z);
       transform.DOLocalRotate(recoil, _fireRate).From(noRecoil).SetLoops(2, LoopType.Yoyo);
+      transform.DOLocalMove(new Vector3(0, 0, -0.04f), 0.1f).From(new Vector3(0, 0, 0)).SetLoops(2, LoopType.Yoyo);
     }
 
     public void DeathAnimation()

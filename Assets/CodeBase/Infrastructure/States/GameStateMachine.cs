@@ -33,6 +33,7 @@ namespace CodeBase.Infrastructure.States
       IGameState state = ChangeState<TState>();
       state.Enter();
     }
+    
 
     public void Enter<TState, TParameter>(TParameter payload) where TState : class, IGamePayloadedState<TParameter>
     {

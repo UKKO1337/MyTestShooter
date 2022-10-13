@@ -12,12 +12,12 @@ namespace CodeBase.Hero.PlayerController
       [SerializeField] private Transform _player;
       [SerializeField] private Camera _camera;
       [SerializeField] [Range(60f, 100f)] private float _fov;
-      [SerializeField] private float _zoomFov = 30f;
 
 
+      private float _zoomFov = 30f;
+      private float _sprintFov = 90f;
       private PlayerMover _playerMover;
       private float _zoomStepTime = 10f;
-      private float _sprintFov = 120f;
 
       private float _sprintZoomStepTime = 10f;
 

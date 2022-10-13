@@ -95,6 +95,7 @@
             <e p="IHealth.cs" t="Include" />
             <e p="ISave.cs" t="Include" />
             <e p="LevelTransfer.cs" t="Include" />
+            <e p="LoadFromButton.cs" t="Include" />
             <e p="SaveFromButton.cs" t="Include" />
             <e p="SaveTrigger.cs" t="Include" />
             <e p="UniqueId.cs" t="Include" />
