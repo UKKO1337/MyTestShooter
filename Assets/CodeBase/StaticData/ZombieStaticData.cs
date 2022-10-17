@@ -21,7 +21,7 @@ namespace CodeBase.StaticData
     [Range(0.5f, 1f)]
     public float Cleavage;
 
-    [Range(1f, 5f)] 
+    [Range(1f, 6f)] 
     public float MoveSpeed;
 
     public AssetReferenceGameObject prefabReference;

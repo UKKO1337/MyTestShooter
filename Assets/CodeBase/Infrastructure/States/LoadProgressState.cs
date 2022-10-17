@@ -20,7 +20,7 @@ namespace CodeBase.Infrastructure.States
 
     public void Enter(bool isNewGame)
     {
-      if (!isNewGame)
+      if (isNewGame)
         _progressService.Progress = NewProgress();
       else
         LoadProgress();

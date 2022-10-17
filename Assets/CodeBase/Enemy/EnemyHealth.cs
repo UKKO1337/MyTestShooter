@@ -28,6 +28,7 @@ namespace CodeBase.Enemy
     {
       Current -= damage; 
       HealthChanged?.Invoke();
+      TookDamage?.Invoke();
     }
   }
 }

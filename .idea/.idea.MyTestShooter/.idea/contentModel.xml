@@ -37,13 +37,14 @@
             <e p="EnemyDeath.cs" t="Include" />
             <e p="EnemyHealth.cs" t="Include" />
             <e p="Follow.cs" t="Include" />
+            <e p="KillCollector.cs" t="Include" />
             <e p="PhysicsDebug.cs" t="Include" />
             <e p="RotateToPlayer.cs" t="Include" />
             <e p="TriggerObserver.cs" t="Include" />
           </e>
           <e p="Hero" t="Include">
-            <e p="CrosshairObject.cs" t="Include" />
             <e p="HitMarkOnPlayer.cs" t="Include" />
+            <e p="LoadFromButton.cs" t="Include" />
             <e p="PlayerController" t="Include">
               <e p="CameraMover.cs" t="Include" />
               <e p="PlayerCrouching.cs" t="Include" />
@@ -52,8 +53,8 @@
             </e>
             <e p="PlayerDeath.cs" t="Include" />
             <e p="PlayerHealth.cs" t="Include" />
+            <e p="SaveFromButton.cs" t="Include" />
             <e p="Shoot.cs" t="Include" />
-            <e p="SprintBar.cs" t="Include" />
           </e>
           <e p="Infrastructure" t="Include">
             <e p="AssetManagement" t="Include">
@@ -93,10 +94,9 @@
             </e>
             <e p="IAnimationStateReader.cs" t="Include" />
             <e p="IHealth.cs" t="Include" />
+            <e p="ILevelTransfer.cs" t="Include" />
             <e p="ISave.cs" t="Include" />
             <e p="LevelTransfer.cs" t="Include" />
-            <e p="LoadFromButton.cs" t="Include" />
-            <e p="SaveFromButton.cs" t="Include" />
             <e p="SaveTrigger.cs" t="Include" />
             <e p="UniqueId.cs" t="Include" />
             <e p="ZombieTypeId.cs" t="Include" />
@@ -127,8 +127,15 @@
             <e p="ZombieStaticData.cs" t="Include" />
           </e>
           <e p="UI" t="Include">
-            <e p="ActorUI.cs" t="Include" />
-            <e p="HPBar.cs" t="Include" />
+            <e p="Elements" t="Include">
+              <e p="ActorUI.cs" t="Include" />
+              <e p="CrosshairObject.cs" t="Include" />
+              <e p="GameOver.cs" t="Include" />
+              <e p="GameOverDead.cs" t="Include" />
+              <e p="HPBar.cs" t="Include" />
+              <e p="KillCounter.cs" t="Include" />
+              <e p="SprintBar.cs" t="Include" />
+            </e>
           </e>
         </e>
         <e p="Plugins" t="Include">

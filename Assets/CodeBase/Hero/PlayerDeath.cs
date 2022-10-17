@@ -1,4 +1,5 @@
-﻿using CodeBase.Hero.PlayerController;
+﻿using System;
+using CodeBase.Hero.PlayerController;
 using UnityEngine;
 
 namespace CodeBase.Hero
@@ -7,12 +8,9 @@ namespace CodeBase.Hero
   public class PlayerDeath : MonoBehaviour
   {
     [SerializeField] private PlayerHealth _health;
-    [SerializeField] private Shoot _shoot;
-    [SerializeField] private PlayerMover _mover;
-    [SerializeField] private PlayerCrouching _crouching;
-    [SerializeField] private PlayerJumper _jumper;
-    [SerializeField] private CameraMover _camera;
-
+    
+    public event Action Dead;
+    
     private bool _isDead;
     
 
@@ -30,14 +28,8 @@ namespace CodeBase.Hero
 
     private void Die()
     {
+      Dead?.Invoke();
       _isDead = true;
-      _mover.enabled = false;
-      _crouching.enabled = false;
-      _jumper.enabled = false;
-      _camera.DeathAnimation();
-      _camera.enabled = false;
-      _shoot.DeathAnimation();
-      _shoot.enabled = false;
     }
   }
 }

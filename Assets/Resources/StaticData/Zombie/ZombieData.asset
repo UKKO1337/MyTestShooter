@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: ZombieData
   m_EditorClassIdentifier: 
   ZombieTypeId: 0
-  Hp: 50
+  Hp: 4
   Damage: 10
   EffectiveDistance: 0.666
   Cleavage: 0.5

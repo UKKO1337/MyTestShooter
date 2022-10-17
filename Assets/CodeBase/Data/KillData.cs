@@ -7,5 +7,15 @@ namespace CodeBase.Data
   public class KillData
   {
     public List<string> ClearedSpawners = new List<string>();
+
+    public int Spawners;
+
+    public Action Happend;
+
+    public void Collect()
+    {
+      Spawners += 1;
+      Happend?.Invoke();
+    }
   }
 }

@@ -11,17 +11,18 @@ namespace CodeBase.Hero
   {
     [SerializeField] private Transform _bulletSpawnPosition;
     
-    [SerializeField] private float _fireRate = 0.2f;
+    [SerializeField] private float _fireRate = 2f;
     [SerializeField] private float _damage = 10f;
     [SerializeField] private float _range = 15f;
     
     [SerializeField] private AudioClip _shotFx;
     [SerializeField] private AudioSource _audioSource;
     [SerializeField] private ParticleSystem _muzzleFlash;
-    [SerializeField] private TrailRenderer _bulletTrail;
-    [SerializeField] private float _bulletSpeed = 100f;
     [SerializeField] private Camera _camera;
 
+    [SerializeField] private PlayerDeath _playerDeath;
+
+    private float _lastShootTime;
     private IInputService _inputService;
     private int _layerMask;
 
@@ -30,6 +31,7 @@ namespace CodeBase.Hero
     {
       _inputService = AllServices.Container.Single<IInputService>();
       _layerMask = 1 << LayerMask.NameToLayer("Hittable");
+      _playerDeath.Dead += Death;
     }
 
     private void Update() => 
@@ -38,7 +40,7 @@ namespace CodeBase.Hero
 
     private void PerformShoot()
     {
-      if (_inputService.IsShootButtonPressed())
+      if (CanShoot())
       {
         _muzzleFlash.Play();
         _audioSource.PlayOneShot(_shotFx);
@@ -50,26 +52,41 @@ namespace CodeBase.Hero
           
           if (health != null) 
             health.TakeDamage(_damage);
-          
         }
         
+        _lastShootTime = Time.time;
       }
       
     }
-    
+
+    private bool CanShoot() => 
+      _inputService.IsShootButtonPressed() && _lastShootTime + _fireRate < Time.time;
+
 
     private void ShootRecoil()
     {
-      Vector3 recoil = new Vector3(-10f, transform.rotation.y, transform.rotation.z);
-      Vector3 noRecoil = new Vector3(0, transform.rotation.y, transform.rotation.z);
-      transform.DOLocalRotate(recoil, _fireRate).From(noRecoil).SetLoops(2, LoopType.Yoyo);
-      transform.DOLocalMove(new Vector3(0, 0, -0.04f), 0.1f).From(new Vector3(0, 0, 0)).SetLoops(2, LoopType.Yoyo);
+      Vector3 verticalRecoil = new Vector3(-10f, 0, 0);
+      Vector3 horizontalRecoil = new Vector3(0, 0, -0.04f);
+      
+      Vector3 noRecoil = new Vector3(0, 0, 0);
+      
+      transform.DOLocalRotate(verticalRecoil, 0.2f).From(noRecoil).SetLoops(2, LoopType.Yoyo);
+      transform.DOLocalMove(horizontalRecoil, 0.1f).From(noRecoil).SetLoops(2, LoopType.Yoyo);
     }
 
-    public void DeathAnimation()
+    private void DeathAnimation()
     {
-      Vector3 hideWeapon = new Vector3(90f, transform.rotation.y, transform.rotation.z);
-      transform.DOLocalRotate(hideWeapon, 2);
+      Vector3 verticalHideWeapon = new Vector3(90f, 0, 0);
+      Vector3 horizontalHideWeapon = new Vector3(0, -0.3f, 0);
+      
+      transform.DOLocalRotate(verticalHideWeapon, 2);
+      transform.DOLocalMove(horizontalHideWeapon, 2);
+    }
+
+    private void Death()
+    {
+      DeathAnimation();
+      enabled = false;
     }
   }
 }

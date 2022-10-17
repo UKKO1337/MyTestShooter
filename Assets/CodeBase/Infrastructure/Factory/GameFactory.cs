@@ -10,6 +10,7 @@ using CodeBase.Services;
 using CodeBase.Services.Input;
 using CodeBase.Services.PersistentProgress;
 using CodeBase.StaticData;
+using CodeBase.UI;
 using UnityEngine;
 using UnityEngine.AI;
 using Object = UnityEngine.Object;
@@ -20,6 +21,7 @@ namespace CodeBase.Infrastructure.Factory
   {
     private readonly IAssets _asset;
     private readonly IStaticDataService _staticData;
+    private IPersistentProgressService _progressService;
 
     public List<ISavedProgressReader> ProgressReaders { get; } = new List<ISavedProgressReader>();
 
@@ -29,9 +31,11 @@ namespace CodeBase.Infrastructure.Factory
 
     private GameObject HUDGameObject { get; set; }
 
+    private GameObject UIGameObject { get; set; }
 
-    public GameFactory(IAssets asset, IStaticDataService staticData, IInputService inputService)
+    public GameFactory(IAssets asset, IStaticDataService staticData, IPersistentProgressService progressService)
     {
+      _progressService = progressService;
       _asset = asset;
       _staticData = staticData;
     }
@@ -53,6 +57,12 @@ namespace CodeBase.Infrastructure.Factory
       return HUDGameObject;
     }
 
+    public async Task<GameObject> CreateUI()
+    {
+      UIGameObject = await InstantiateRegisteredAsync(AssetsAddress.MenuUI);
+      return UIGameObject;
+    }
+
     public async Task<GameObject> CreateZombie(ZombieTypeId typeId, Transform parent)
     {
       ZombieStaticData zombieData = _staticData.ForZombie(typeId);
@@ -65,6 +75,7 @@ namespace CodeBase.Infrastructure.Factory
       health.Current = zombieData.Hp;
       health.Max = zombieData.Hp;
       
+      zombie.GetComponent<KillCollector>().Construct(_progressService.Progress.KillData);
       zombie.GetComponent<AgentMoveToPlayer>().Construct(HeroGameObject.transform);
       zombie.GetComponent<NavMeshAgent>().speed = zombieData.MoveSpeed;
       

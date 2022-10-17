@@ -19,5 +19,6 @@ namespace CodeBase.Infrastructure.Factory
 
     void Cleanup();
     Task WarmUp();
+    Task<GameObject> CreateUI();
   }
 }

@@ -14,13 +14,67 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   LevelKey: Main
   EnemySpawners:
+  - Id: Main_550f13ea-9885-4744-a3ac-534f6a76b8b2
+    ZombieTypeId: 0
+    Position: {x: 63.39041, y: 2.095892, z: 25.203983}
+  - Id: Main_d4bcb969-69ef-4f1e-9207-133414ebf49f
+    ZombieTypeId: 0
+    Position: {x: 62.46776, y: 2.0958958, z: 34.02421}
+  - Id: Main_382cf0d9-62f0-4af7-8524-cfefbb9428ca
+    ZombieTypeId: 0
+    Position: {x: 54.483734, y: 2.095892, z: 15.639605}
+  - Id: Main_9de5c7aa-b3d3-4feb-8f41-ae30c2e2b723
+    ZombieTypeId: 0
+    Position: {x: 59.231606, y: 2.095892, z: 25.905096}
+  - Id: Main_4cced01f-d16f-4edf-bcbe-521e10eadddd
+    ZombieTypeId: 0
+    Position: {x: 57.83374, y: 1.912077, z: -2.2945957}
+  - Id: Main_e16e4d7c-bfe2-4c26-92f6-1ae28dc46fe6
+    ZombieTypeId: 0
+    Position: {x: 47.585175, y: 1.632225, z: 9.418768}
+  - Id: Main_12f56100-abd9-4572-97c9-bffd87100fdb
+    ZombieTypeId: 0
+    Position: {x: 63.587685, y: 1.912075, z: 12.732603}
+  - Id: Main_ead35d03-03f2-4e64-aed3-c0f663b0de22
+    ZombieTypeId: 0
+    Position: {x: 57.84957, y: 1.9120731, z: 9.550226}
+  - Id: Main_2fd35ea4-e8e7-4494-99aa-f9136af3425b
+    ZombieTypeId: 0
+    Position: {x: 48.146255, y: 1.6322222, z: 2.0580292}
+  - Id: Main_8e09a525-40b6-46c3-8381-f08bdace4031
+    ZombieTypeId: 0
+    Position: {x: 45.043694, y: 1.912075, z: -17.27267}
+  - Id: Main_2d35fd19-7cea-4228-b08c-098790dfe1ff
+    ZombieTypeId: 0
+    Position: {x: 57.72989, y: 2.0958014, z: -23.326134}
+  - Id: Main_14709b75-9a88-4af2-854f-33a55df85001
+    ZombieTypeId: 0
+    Position: {x: 43.523643, y: 1.6322241, z: -0.14732933}
+  - Id: Main_dc69025d-ca77-43da-afa2-3cbefea74869
+    ZombieTypeId: 0
+    Position: {x: 51.038216, y: 1.912075, z: -16.874168}
+  - Id: Main_e8a45363-49f0-4f1a-bf30-4c620a486b46
+    ZombieTypeId: 0
+    Position: {x: 35.354748, y: 1.3893137, z: -16.769653}
+  - Id: Main_979f2a36-7d25-48dc-a0e5-73b198c177c4
+    ZombieTypeId: 0
+    Position: {x: 10.020971, y: 1.6324244, z: -15.323487}
+  - Id: Main_75a52273-2e5e-4054-afdf-52b7a334376b
+    ZombieTypeId: 0
+    Position: {x: 17.03336, y: -0.08784294, z: -18.766933}
+  - Id: Main_ace7ebb8-d840-4b70-ba34-254feae9d9fc
+    ZombieTypeId: 0
+    Position: {x: 27.107925, y: 1.631897, z: -5.808358}
+  - Id: Main_32fc6054-9956-46b2-ab2b-9fcdf01fc98e
+    ZombieTypeId: 0
+    Position: {x: 15.549674, y: -0.08781624, z: -5.9206553}
   - Id: Main_5a56c9a8-fe23-4b15-8e90-4b9b2cfe4dba
     ZombieTypeId: 0
     Position: {x: 14.09301, y: -0.087925434, z: 12.989209}
   - Id: Main_544041f6-dabb-4274-96a2-6c48f236da0b
     ZombieTypeId: 0
-    Position: {x: 15.462048, y: -0.08792353, z: 10.751019}
-  - Id: SpawnMarker_50fe9d70-311a-48e2-9bd2-f007c089914d
+    Position: {x: 18.68, y: -0.08792353, z: -5.267955}
+  - Id: SpawnMarker_92e8e455-b2cc-4490-b92f-c4fc88f44387
     ZombieTypeId: 0
-    Position: {x: 15.59, y: -0.08792448, z: 12.58}
-  InitialPlayerPosition: {x: -3.851, y: 0.875, z: 11.49}
+    Position: {x: 17.98, y: -0.08792448, z: 10.802045}
+  InitialPlayerPosition: {x: -3.851, y: 0.48, z: 11.49}

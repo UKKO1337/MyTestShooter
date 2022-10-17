@@ -7,6 +7,7 @@ using CodeBase.Services;
 using CodeBase.Services.PersistentProgress;
 using CodeBase.StaticData;
 using CodeBase.UI;
+using CodeBase.UI.Elements;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -63,7 +64,16 @@ namespace CodeBase.Infrastructure.States
       
       await InitSpawners(levelData);
       GameObject hero = await InitHero(levelData);
-      await InitHud(hero);
+      GameObject hud = await InitHud(hero, levelData);
+      await InitUI(hud, hero);
+    }
+
+    private async Task InitUI(GameObject hud, GameObject hero)
+    {
+      GameObject ui = await _gameFactory.CreateUI();
+      ui.GetComponentInChildren<GameOver>().Construct(hud.GetComponentInChildren<KillCounter>());
+      ui.GetComponentInChildren<GameOverDead>().Construct(hero.GetComponentInChildren<PlayerDeath>());
+
     }
 
     private async Task InitSpawners(LevelStaticData levelData)
@@ -72,16 +82,22 @@ namespace CodeBase.Infrastructure.States
         await _gameFactory.CreateSpawner(spawnerData.Position, spawnerData.Id, spawnerData.ZombieTypeId);
     }
 
-    private async Task InitHud(GameObject hero)
+    private async Task<GameObject> InitHud(GameObject hero, LevelStaticData levelData)
     {
       GameObject hud = await _gameFactory.CreateHUD();
       
       hud.GetComponentInChildren<ActorUI>()
         .Construct(hero.GetComponent<PlayerHealth>(), hero.GetComponent<PlayerMover>());
+      hud.GetComponentInChildren<KillCounter>().Construct(levelData);
+      
+      return hud;
     }
 
-    private async Task<GameObject> InitHero(LevelStaticData levelData) => 
-      await _gameFactory.CreateHero(at: levelData.InitialPlayerPosition);
+    private async Task<GameObject> InitHero(LevelStaticData levelData)
+    {
+      GameObject hero = await _gameFactory.CreateHero(at: levelData.InitialPlayerPosition);
+      return hero;
+    }
 
     private LevelStaticData LevelStaticData() => 
       _staticData.ForLevel(SceneManager.GetActiveScene().name);

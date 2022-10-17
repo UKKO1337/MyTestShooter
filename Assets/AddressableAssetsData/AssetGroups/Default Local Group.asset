@@ -33,6 +33,10 @@ MonoBehaviour:
     m_Address: HUD
     m_ReadOnly: 0
     m_SerializedLabels: []
+  - m_GUID: e8f3ddb0175ea58479a815740ad51afb
+    m_Address: MenuUI
+    m_ReadOnly: 0
+    m_SerializedLabels: []
   m_ReadOnly: 0
   m_Settings: {fileID: 11400000, guid: bc9ad891b3a8a474ebc21a21a4b1634f, type: 2}
   m_SchemaSet:

@@ -1731,6 +1731,7 @@ GameObject:
   - component: {fileID: 4664669743763101342}
   - component: {fileID: 7379055056240384373}
   - component: {fileID: 6255487646463201409}
+  - component: {fileID: 6262416459786697683}
   m_Layer: 15
   m_Name: Zombie1
   m_TagString: Untagged
@@ -1866,7 +1867,7 @@ MonoBehaviour:
   _death: {fileID: 7379055056240384373}
   TriggerObserver: {fileID: 4268700159162735994}
   Follow: {fileID: 947858471198295228}
-  Cooldown: 2
+  Cooldown: 0.5
 --- !u!114 &4644493677306187988
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1879,7 +1880,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c330c2685cd95ed4387568e5043908f0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _damage: 10
+  Damage: 10
   Animator: {fileID: 5376981630441288460}
   AttackCooldown: 1
   Cleavage: 0.5
@@ -1940,6 +1941,19 @@ CapsuleCollider:
   m_Height: 1.48
   m_Direction: 1
   m_Center: {x: 0, y: 1.08, z: 0}
+--- !u!114 &6262416459786697683
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4493914613880827488}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4b44bb2d922b41a4b5ea163b4f9377e3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _enemyDeath: {fileID: 7379055056240384373}
 --- !u!1 &4710940672626480558
 GameObject:
   m_ObjectHideFlags: 0
@@ -2361,7 +2375,7 @@ SphereCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 15
+  m_Radius: 40
   m_Center: {x: 0, y: 1, z: 0}
 --- !u!114 &4268700159162735994
 MonoBehaviour:

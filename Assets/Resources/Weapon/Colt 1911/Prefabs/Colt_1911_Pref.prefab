@@ -80,15 +80,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _bulletSpawnPosition: {fileID: 3737868235985330566}
-  _fireRate: 0.2
+  _fireRate: 0.3
   _damage: 10
   _range: 15
   _shotFx: {fileID: 8300000, guid: 1818995984a1b7f468aa329dfa171ce2, type: 3}
   _audioSource: {fileID: 774504758524364061}
   _muzzleFlash: {fileID: 1732202832656655752}
-  _bulletTrail: {fileID: 1462353402186173558, guid: cbc5ec771fbdbab4280cfc79c1481206, type: 3}
-  _bulletSpeed: 100
   _camera: {fileID: 0}
+  _playerDeath: {fileID: 0}
 --- !u!82 &774504758524364061
 AudioSource:
   m_ObjectHideFlags: 0
@@ -101,7 +100,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.2
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -341,6 +340,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 95a080dbd4f352c4f85066834a6c6e84, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 95a080dbd4f352c4f85066834a6c6e84, type: 3}
+      propertyPath: m_ReceiveShadows
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 95a080dbd4f352c4f85066834a6c6e84, type: 3}

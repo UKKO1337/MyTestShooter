@@ -1,4 +1,5 @@
-﻿using CodeBase.Data;
+﻿using System;
+using CodeBase.Data;
 using CodeBase.Enemy;
 using CodeBase.Infrastructure.Factory;
 using CodeBase.Services.PersistentProgress;
@@ -11,7 +12,7 @@ namespace CodeBase.Logic.EnemySpawners
     public ZombieTypeId ZombieTypeId;
     private bool _slain;
     public string Id { get; set; }
-    
+
     private IGameFactory _gameFactory;
     private EnemyDeath _enemyDeath;
 
@@ -28,9 +29,9 @@ namespace CodeBase.Logic.EnemySpawners
 
     public void UpdateProgress(PlayerProgress progress)
     {
-      if(_slain)
+      if (_slain) 
         progress.KillData.ClearedSpawners.Add(Id);
-      
+
     }
 
     private async void Spawn()
@@ -44,7 +45,7 @@ namespace CodeBase.Logic.EnemySpawners
     {
       if (_enemyDeath != null) 
         _enemyDeath.Happend -= Slay;
-      
+
       _slain = true;
     }
     

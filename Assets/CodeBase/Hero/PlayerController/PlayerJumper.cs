@@ -9,14 +9,18 @@ namespace CodeBase.Hero.PlayerController
   {
     [SerializeField] private Rigidbody _rigidbody;
     [SerializeField] private float _jumpPower;
+    [SerializeField] private PlayerDeath _playerDeath;
 
     private IInputService _inputService;
 
     private bool _isGrounded;
 
 
-    private void Awake() => 
+    private void Awake()
+    {
       _inputService = AllServices.Container.Single<IInputService>();
+      _playerDeath.Dead += JumperOff;
+    }
 
     private void Update()
     {
@@ -47,5 +51,8 @@ namespace CodeBase.Hero.PlayerController
       else
         _isGrounded = false;
     }
+
+    private void JumperOff() => 
+      enabled = false;
   }
 }

@@ -8,6 +8,8 @@ namespace CodeBase.Hero.PlayerController
 {
    public class CameraMover : MonoBehaviour
    {
+      [SerializeField] private PlayerMover _playerMover;
+      [SerializeField] private PlayerDeath _playerDeath;
       [SerializeField] private float _rotateSpeed;
       [SerializeField] private Transform _player;
       [SerializeField] private Camera _camera;
@@ -16,13 +18,9 @@ namespace CodeBase.Hero.PlayerController
 
       private float _zoomFov = 30f;
       private float _sprintFov = 90f;
-      private PlayerMover _playerMover;
       private float _zoomStepTime = 10f;
-
       private float _sprintZoomStepTime = 10f;
-
       private float _xRotation;
-
       private IInputService _inputService;
 
 
@@ -30,8 +28,8 @@ namespace CodeBase.Hero.PlayerController
       {
          _inputService = AllServices.Container.Single<IInputService>();
          Cursor.lockState = CursorLockMode.Locked;
-         _playerMover = GetComponentInParent<PlayerMover>();
          _camera.fieldOfView = _fov;
+         _playerDeath.Dead += Death;
       }
 
       private void Start()
@@ -53,7 +51,7 @@ namespace CodeBase.Hero.PlayerController
          Zoom(_inputService.IsZoomButtonPressed());
       }
 
-      public void DeathAnimation()
+      private void DeathAnimation()
       {
          Vector3 deathPosition = new Vector3(transform.position.x, transform.position.y - 1f, transform.position.z);
          transform.DOMove(endValue: deathPosition, duration: 2f);
@@ -88,6 +86,12 @@ namespace CodeBase.Hero.PlayerController
          
          _player.Rotate(mouseAxisX * new Vector3(0, 1, 0));
          transform.localRotation = Quaternion.Euler(_xRotation,0,0);
+      }
+
+      private void Death()
+      {
+         DeathAnimation();
+         enabled = false;
       }
    }
 }

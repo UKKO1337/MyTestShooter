@@ -60,7 +60,7 @@ namespace CodeBase.Infrastructure.States
       RegisterAssetProvider();
       _services.RegisterSingle<IPersistentProgressService>(new PersistentProgressService());
       _services.RegisterSingle<IGameFactory>(new GameFactory(_services.Single<IAssets>(),
-        _services.Single<IStaticDataService>(), _services.Single<IInputService>()));
+        _services.Single<IStaticDataService>(), _services.Single<IPersistentProgressService>()));
       _services.RegisterSingle<ISaveLoadService>(new SaveLoadService(_services.Single<IPersistentProgressService>(),
         _services.Single<IGameFactory>()));
     }

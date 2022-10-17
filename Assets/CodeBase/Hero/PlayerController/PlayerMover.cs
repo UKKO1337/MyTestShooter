@@ -13,6 +13,7 @@ namespace CodeBase.Hero.PlayerController
   [SerializeField] private Rigidbody _rigidbody;
   [SerializeField] private float _sprintSpeed;
   [SerializeField] private float _speed;
+  [SerializeField] private PlayerDeath _playerDeath;
 
   public Action OnPlayerSprintStart;
   public Action OnPlayerSprintEnd;
@@ -35,6 +36,7 @@ namespace CodeBase.Hero.PlayerController
    SprintRemaining = SprintDuration;
    _sprintCooldownReset = _sprintCooldownTimer;
    _inputService = AllServices.Container.Single<IInputService>();
+   _playerDeath.Dead += MoverOff;
   }
 
   private void Update()
@@ -107,10 +109,8 @@ namespace CodeBase.Hero.PlayerController
    {
     _sprintCooldownTimer -= 1 * Time.deltaTime;
 
-    if (_sprintCooldownTimer <= 0)
-    {
+    if (_sprintCooldownTimer <= 0) 
      _isSprintCooldown = false;
-    }
    }
 
    else
@@ -127,6 +127,9 @@ namespace CodeBase.Hero.PlayerController
    velocityChange.y = 0;
    return velocityChange;
   }
+
+  private void MoverOff() => 
+   enabled = false;
 
   public void LoadProgress(PlayerProgress progress)
   {
