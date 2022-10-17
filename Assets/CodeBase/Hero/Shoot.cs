@@ -11,7 +11,7 @@ namespace CodeBase.Hero
   {
     [SerializeField] private Transform _bulletSpawnPosition;
     
-    [SerializeField] private float _fireRate = 2f;
+    [SerializeField] private float _fireRate = 0.2f;
     [SerializeField] private float _damage = 10f;
     [SerializeField] private float _range = 15f;
     

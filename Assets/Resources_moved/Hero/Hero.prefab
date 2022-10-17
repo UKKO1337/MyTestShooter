@@ -29,8 +29,8 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 4657650542303962450}
   - {fileID: 3963386553626852136}
+  - {fileID: 4657650542303962450}
   m_Father: {fileID: 3963386552639930074}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -48,10 +48,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _playerMover: {fileID: 5579899602042430146}
   _playerDeath: {fileID: 4799858872349085958}
-  _rotateSpeed: 20
   _player: {fileID: 3963386552639930074}
   _camera: {fileID: 3963386553626852143}
   _fov: 60
+  _rotateSpeed: 20
 --- !u!1 &3963386552639930078
 GameObject:
   m_ObjectHideFlags: 0
@@ -300,7 +300,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 3963386552578020425}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!20 &3963386553626852143
 Camera:
@@ -479,7 +479,7 @@ Transform:
   m_Children:
   - {fileID: 1470692051113123791}
   m_Father: {fileID: 3963386552578020425}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &4124405718550344318
 PrefabInstance:

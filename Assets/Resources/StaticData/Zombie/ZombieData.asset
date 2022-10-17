@@ -13,11 +13,11 @@ MonoBehaviour:
   m_Name: ZombieData
   m_EditorClassIdentifier: 
   ZombieTypeId: 0
-  Hp: 4
+  Hp: 50
   Damage: 10
   EffectiveDistance: 0.666
   Cleavage: 0.5
-  MoveSpeed: 5
+  MoveSpeed: 5.5
   prefabReference:
     m_AssetGUID: 6dc4cf4496348884d8ee27743ae38562
     m_SubObjectName: 

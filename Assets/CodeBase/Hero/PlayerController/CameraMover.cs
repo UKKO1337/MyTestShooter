@@ -10,10 +10,11 @@ namespace CodeBase.Hero.PlayerController
    {
       [SerializeField] private PlayerMover _playerMover;
       [SerializeField] private PlayerDeath _playerDeath;
-      [SerializeField] private float _rotateSpeed;
       [SerializeField] private Transform _player;
       [SerializeField] private Camera _camera;
       [SerializeField] [Range(60f, 100f)] private float _fov;
+      [SerializeField] private float _rotateSpeed = 20f;
+
 
 
       private float _zoomFov = 30f;

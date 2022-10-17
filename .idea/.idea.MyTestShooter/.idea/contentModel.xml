@@ -123,6 +123,7 @@
           <e p="StaticData" t="Include">
             <e p="EnemySpawnerData.cs" t="Include" />
             <e p="LevelStaticData.cs" t="Include" />
+            <e p="PlayerStaticData.cs" t="Include" />
             <e p="StaticDataService.cs" t="Include" />
             <e p="ZombieStaticData.cs" t="Include" />
           </e>

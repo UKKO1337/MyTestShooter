@@ -8,6 +8,7 @@ namespace CodeBase.Enemy
   {
     [SerializeField] private EnemyHealth _enemyHealth;
     [SerializeField] private EnemyAnimator _enemyAnimator;
+    [SerializeField] private Collider _enemyCollider;
 
     public event Action Happend;
 
@@ -29,6 +30,7 @@ namespace CodeBase.Enemy
       Happend?.Invoke();
       _enemyHealth.HealthChanged -= HealthChanged;
       _enemyAnimator.PlayDeath();
+      _enemyCollider.enabled = false;
 
       StartCoroutine(DestroyTimer());
     }

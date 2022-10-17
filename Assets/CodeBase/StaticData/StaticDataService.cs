@@ -20,15 +20,14 @@ namespace CodeBase.StaticData
         .ToDictionary(x => x.LevelKey, x => x);
     }
 
-    public ZombieStaticData ForZombie(ZombieTypeId typeId) => 
-      _monsters.TryGetValue(typeId, out ZombieStaticData staticData) 
-        ? staticData 
+    public ZombieStaticData ForZombie(ZombieTypeId typeId) =>
+      _monsters.TryGetValue(typeId, out ZombieStaticData staticData)
+        ? staticData
         : null;
 
     public LevelStaticData ForLevel(string sceneKey) =>
-      _levels.TryGetValue(sceneKey, out LevelStaticData staticData) 
-      ? staticData 
-      : null;
-    
+      _levels.TryGetValue(sceneKey, out LevelStaticData staticData)
+        ? staticData
+        : null;
   }
 }

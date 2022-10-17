@@ -1927,6 +1927,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _enemyHealth: {fileID: 4664669743763101342}
   _enemyAnimator: {fileID: 5376981630441288460}
+  _enemyCollider: {fileID: 6255487646463201409}
 --- !u!136 &6255487646463201409
 CapsuleCollider:
   m_ObjectHideFlags: 0

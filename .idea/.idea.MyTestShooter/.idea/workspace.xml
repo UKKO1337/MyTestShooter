@@ -24,6 +24,8 @@
       <change afterPath="$PROJECT_DIR$/Assets/CodeBase/Enemy/KillCollector.cs.meta" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/Assets/CodeBase/Logic/ILevelTransfer.cs" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/Assets/CodeBase/Logic/ILevelTransfer.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/CodeBase/StaticData/PlayerStaticData.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/CodeBase/StaticData/PlayerStaticData.cs.meta" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/Assets/CodeBase/UI/Elements.meta" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/Assets/CodeBase/UI/Elements/GameOver.cs" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/Assets/CodeBase/UI/Elements/GameOver.cs.meta" afterDir="false" />
@@ -33,6 +35,8 @@
       <change afterPath="$PROJECT_DIR$/Assets/CodeBase/UI/Elements/KillCounter.cs.meta" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/Assets/Resources/HUD/KillCounter.prefab" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/Assets/Resources/HUD/KillCounter.prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/Scene/Music/doom_02. Rip &amp; Tear.mp3" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/Scene/Music/doom_02. Rip &amp; Tear.mp3.meta" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/Assets/Resources_moved/UI.meta" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/Assets/Resources_moved/UI/MenuUI.prefab" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/Assets/Resources_moved/UI/MenuUI.prefab.meta" afterDir="false" />
@@ -41,6 +45,7 @@
       <change beforePath="$PROJECT_DIR$/.idea/.idea.MyTestShooter/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.MyTestShooter/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/AddressableAssetsData/AssetGroups/Default Local Group.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AddressableAssetsData/AssetGroups/Default Local Group.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/CodeBase/Data/KillData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CodeBase/Data/KillData.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CodeBase/Enemy/EnemyDeath.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CodeBase/Enemy/EnemyDeath.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/CodeBase/Enemy/EnemyHealth.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CodeBase/Enemy/EnemyHealth.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/CodeBase/Hero/CrosshairObject.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CodeBase/UI/Elements/CrosshairObject.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/CodeBase/Hero/CrosshairObject.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CodeBase/UI/Elements/CrosshairObject.cs.meta" afterDir="false" />
@@ -65,6 +70,7 @@
       <change beforePath="$PROJECT_DIR$/Assets/CodeBase/Logic/LoadFromButton.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CodeBase/Hero/LoadFromButton.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/CodeBase/Logic/SaveFromButton.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CodeBase/Hero/SaveFromButton.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/CodeBase/Logic/SaveFromButton.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CodeBase/Hero/SaveFromButton.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CodeBase/StaticData/StaticDataService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CodeBase/StaticData/StaticDataService.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/CodeBase/StaticData/ZombieStaticData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CodeBase/StaticData/ZombieStaticData.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/CodeBase/UI/ActorUI.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CodeBase/UI/Elements/ActorUI.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/CodeBase/UI/ActorUI.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CodeBase/UI/Elements/ActorUI.cs.meta" afterDir="false" />
@@ -154,6 +160,7 @@
     <setting file="file://$PROJECT_DIR$/Assets/CodeBase/Logic/LevelTransfer.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/CodeBase/Data/DataExtensions.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/CodeBase/Enemy/KillCollector.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/CodeBase/StaticData/PlayerStaticData.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/CodeBase/Services/PersistentProgress/PersistentProgressService.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/CodeBase/Data/State.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/CodeBase/Data/Vector3Data.cs" root0="FORCE_HIGHLIGHTING" />
@@ -192,8 +199,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Assets/CodeBase/StaticData/LevelStaticData.cs" />
-        <option value="$PROJECT_DIR$/Assets/CodeBase/Infrastructure/Factory/IGameFactory.cs" />
         <option value="$PROJECT_DIR$/Assets/CodeBase/Editor/LevelStaticDataEditor.cs" />
         <option value="$PROJECT_DIR$/Assets/CodeBase/Infrastructure/AssetManagement/AssetPath.cs" />
         <option value="$PROJECT_DIR$/Assets/CodeBase/Infrastructure/AssetManagement/AssetAddress.cs" />
@@ -209,9 +214,7 @@
         <option value="$PROJECT_DIR$/Assets/CodeBase/Services/Input/InputService.cs" />
         <option value="$PROJECT_DIR$/Assets/CodeBase/Infrastructure/States/GameStateMachine.cs" />
         <option value="$PROJECT_DIR$/Assets/CodeBase/CameraLogic/CameraRotator.cs" />
-        <option value="$PROJECT_DIR$/Assets/CodeBase/StaticData/PlayerStaticData.cs" />
         <option value="$PROJECT_DIR$/Assets/CodeBase/Enemy/EnemyHealth.cs" />
-        <option value="$PROJECT_DIR$/Assets/CodeBase/Enemy/EnemyDeath.cs" />
         <option value="$PROJECT_DIR$/Assets/CodeBase/Infrastructure/States/BootstrapState.cs" />
         <option value="$PROJECT_DIR$/Assets/CodeBase/UI/KillCollecter.cs" />
         <option value="$PROJECT_DIR$/Assets/CodeBase/Enemy/KillCollecter.cs" />
@@ -221,7 +224,6 @@
         <option value="$PROJECT_DIR$/Assets/CodeBase/Enemy/KillCollector.cs" />
         <option value="$PROJECT_DIR$/Assets/CodeBase/Infrastructure/States/LoadProgressState.cs" />
         <option value="$PROJECT_DIR$/Assets/CodeBase/Infrastructure/AssetManagement/AssetsAddress.cs" />
-        <option value="$PROJECT_DIR$/Assets/CodeBase/Infrastructure/Factory/GameFactory.cs" />
         <option value="$PROJECT_DIR$/Assets/CodeBase/Logic/LoadFromButton.cs" />
         <option value="$PROJECT_DIR$/Assets/CodeBase/Infrastructure/States/IGameStateMachine.cs" />
         <option value="$PROJECT_DIR$/Assets/CodeBase/Logic/ILevelTransfer.cs" />
@@ -240,9 +242,14 @@
         <option value="$PROJECT_DIR$/Assets/CodeBase/Hero/PlayerController/PlayerCrouching.cs" />
         <option value="$PROJECT_DIR$/Assets/CodeBase/UI/Elements/KillCounter.cs" />
         <option value="$PROJECT_DIR$/Assets/CodeBase/Hero/PlayerDeath.cs" />
-        <option value="$PROJECT_DIR$/Assets/CodeBase/Hero/Shoot.cs" />
-        <option value="$PROJECT_DIR$/Assets/CodeBase/Hero/PlayerController/CameraMover.cs" />
         <option value="$PROJECT_DIR$/Assets/CodeBase/StaticData/ZombieStaticData.cs" />
+        <option value="$PROJECT_DIR$/Assets/CodeBase/Enemy/EnemyDeath.cs" />
+        <option value="$PROJECT_DIR$/Assets/CodeBase/Hero/PlayerController/CameraMover.cs" />
+        <option value="$PROJECT_DIR$/Assets/CodeBase/StaticData/PlayerStaticData.cs" />
+        <option value="$PROJECT_DIR$/Assets/CodeBase/Infrastructure/Factory/GameFactory.cs" />
+        <option value="$PROJECT_DIR$/Assets/CodeBase/Services/IStaticDataService.cs" />
+        <option value="$PROJECT_DIR$/Assets/CodeBase/StaticData/StaticDataService.cs" />
+        <option value="$PROJECT_DIR$/Assets/CodeBase/Hero/Shoot.cs" />
       </list>
     </option>
   </component>
@@ -329,7 +336,7 @@
       <workItem from="1665728725128" duration="9741000" />
       <workItem from="1665823097656" duration="6329000" />
       <workItem from="1665912039010" duration="1792000" />
-      <workItem from="1665990301957" duration="5362000" />
+      <workItem from="1665990301957" duration="8371000" />
     </task>
     <servers />
   </component>
@@ -371,9 +378,9 @@
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="737" y="216" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.0.1920.1080@0.0.1920.1080" timestamp="1665137366141" />
-    <state x="623" y="235" width="672" height="678" key="search.everywhere.popup" timestamp="1665996625926">
+    <state x="623" y="235" width="672" height="678" key="search.everywhere.popup" timestamp="1666001123446">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state x="623" y="235" width="672" height="678" key="search.everywhere.popup/0.0.1920.1080@0.0.1920.1080" timestamp="1665996625926" />
+    <state x="623" y="235" width="672" height="678" key="search.everywhere.popup/0.0.1920.1080@0.0.1920.1080" timestamp="1666001123446" />
   </component>
 </project>
