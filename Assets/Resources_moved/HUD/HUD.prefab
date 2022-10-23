@@ -409,6 +409,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6571034891087481214, guid: 6bad33c95a6761a48b9d224f3312b063, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 1920
+      objectReference: {fileID: 0}
+    - target: {fileID: 6571034891087481214, guid: 6bad33c95a6761a48b9d224f3312b063, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 1080
+      objectReference: {fileID: 0}
     - target: {fileID: 8817529048672096750, guid: 6bad33c95a6761a48b9d224f3312b063, type: 3}
       propertyPath: m_Name
       value: HitMarkOnPlayer

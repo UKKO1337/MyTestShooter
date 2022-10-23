@@ -1,8 +1,10 @@
-﻿using CodeBase.Logic;
+﻿using CodeBase.Infrastructure.States;
+using CodeBase.Logic;
 using CodeBase.Services;
 using CodeBase.Services.Input;
 using CodeBase.Services.SaveLoad;
 using UnityEngine;
+using Zenject;
 
 namespace CodeBase.Hero
 {
@@ -11,11 +13,16 @@ namespace CodeBase.Hero
     private IInputService _inputService;
     private ISaveLoadService _saveLoadService;
 
-    private void Awake()
+    
+    
+    
+    [Inject]
+    private void Construct(IInputService inputService, ISaveLoadService saveLoadService)
     {
-      _inputService = AllServices.Container.Single<IInputService>();
-      _saveLoadService = AllServices.Container.Single<ISaveLoadService>();
+      _saveLoadService = saveLoadService;
+      _inputService = inputService;
     }
+    
 
     private void Update()
     {

@@ -1,8 +1,10 @@
 using System;
 using CodeBase.Services;
 using CodeBase.Services.Input;
+using CodeBase.UI.Elements;
 using UnityEngine;
 using DG.Tweening;
+using Zenject;
 
 namespace CodeBase.Hero.PlayerController
 {
@@ -24,13 +26,18 @@ namespace CodeBase.Hero.PlayerController
       private float _xRotation;
       private IInputService _inputService;
 
+      [Inject]
+      private void Construct(IInputService inputService)
+      {
+         _inputService = inputService;
+      }
+
 
       private void Awake()
       {
-         _inputService = AllServices.Container.Single<IInputService>();
          Cursor.lockState = CursorLockMode.Locked;
          _camera.fieldOfView = _fov;
-         _playerDeath.Dead += Death;
+         _playerDeath.Dead += CameraMoverOff;
       }
 
       private void Start()
@@ -89,7 +96,7 @@ namespace CodeBase.Hero.PlayerController
          transform.localRotation = Quaternion.Euler(_xRotation,0,0);
       }
 
-      private void Death()
+      private void CameraMoverOff()
       {
          DeathAnimation();
          enabled = false;

@@ -1,11 +1,17 @@
-﻿namespace CodeBase.Infrastructure.States
+﻿using Zenject;
+
+namespace CodeBase.Infrastructure.States
 {
   public class GameLoopState : IGameState
   {
-    public GameLoopState(GameStateMachine stateMachine)
+    private IGameStateMachine _stateMachine;
+
+    [Inject]
+    private void Construct(IGameStateMachine stateMachine)
     {
-      
+      _stateMachine = stateMachine;
     }
+    
 
     public void Exit()
     {

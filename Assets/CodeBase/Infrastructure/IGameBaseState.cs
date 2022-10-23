@@ -1,6 +1,6 @@
 ﻿namespace CodeBase.Infrastructure
 {
-  public interface IGameBaseState 
+  public interface IGameBaseState
   {
     void Exit();
   }

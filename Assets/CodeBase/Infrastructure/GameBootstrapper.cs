@@ -1,6 +1,8 @@
 using CodeBase.Infrastructure.States;
 using CodeBase.Logic;
+using CodeBase.Services.Input;
 using UnityEngine;
+using Zenject;
 
 namespace CodeBase.Infrastructure
 {
@@ -10,9 +12,13 @@ namespace CodeBase.Infrastructure
       
       public Game game;
 
+      private IInputService _inputService;
+
+      
+
       private void Awake()
       {
-        game = new Game(this, Instantiate(CurtainPrefab));
+        game = new Game();
         game.StateMachine.Enter<BootstrapState>();
         
         DontDestroyOnLoad(this);

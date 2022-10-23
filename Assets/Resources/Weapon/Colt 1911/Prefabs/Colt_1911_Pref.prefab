@@ -82,7 +82,7 @@ MonoBehaviour:
   _bulletSpawnPosition: {fileID: 3737868235985330566}
   _fireRate: 0.3
   _damage: 10
-  _range: 15
+  _range: 20
   _shotFx: {fileID: 8300000, guid: 1818995984a1b7f468aa329dfa171ce2, type: 3}
   _audioSource: {fileID: 774504758524364061}
   _muzzleFlash: {fileID: 1732202832656655752}

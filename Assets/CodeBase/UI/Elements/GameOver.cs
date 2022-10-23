@@ -1,8 +1,9 @@
-﻿using CodeBase.Infrastructure.States;
+﻿using System.Collections;
+using CodeBase.Infrastructure.States;
 using CodeBase.Logic;
-using CodeBase.Services;
 using UnityEngine;
 using UnityEngine.UI;
+using Zenject;
 
 namespace CodeBase.UI.Elements
 {
@@ -16,10 +17,13 @@ namespace CodeBase.UI.Elements
     private KillCounter _killCounter;
     private IGameStateMachine _stateMachine;
 
+    [Inject]
+    private void Construct(IGameStateMachine stateMachine) => 
+      _stateMachine = stateMachine;
+
     public void Construct(KillCounter killCounter)
     {
       _gameOver.SetActive(false);
-      _stateMachine = AllServices.Container.Single<IGameStateMachine>();
       _killCounter = killCounter;
       _killCounter.MissionAccomplished += ShowGameOver;
       _newGameButton.onClick.AddListener(StartNewGame);
@@ -30,7 +34,7 @@ namespace CodeBase.UI.Elements
     private void ShowGameOver()
     {
       _gameOver.SetActive(true);
-      Cursor.lockState = CursorLockMode.Confined;
+      StartCoroutine(GameOverTimer());
     }
 
     public void StartNewGame() => 
@@ -48,5 +52,12 @@ namespace CodeBase.UI.Elements
 
     private void EnterState() => 
       _stateMachine.Enter<BootstrapState>();
+
+    private IEnumerator GameOverTimer()
+    {
+      yield return new WaitForSeconds(1);
+      Cursor.lockState = CursorLockMode.Confined;
+      Time.timeScale = 0;
+    }
   }
 }

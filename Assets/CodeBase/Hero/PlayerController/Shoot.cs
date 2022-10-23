@@ -1,11 +1,11 @@
-using System.Collections;
 using CodeBase.Logic;
-using CodeBase.Services;
 using CodeBase.Services.Input;
-using UnityEngine;
+using CodeBase.UI.Elements;
 using DG.Tweening;
+using UnityEngine;
+using Zenject;
 
-namespace CodeBase.Hero
+namespace CodeBase.Hero.PlayerController
 {
   public class Shoot : MonoBehaviour
   {
@@ -27,11 +27,16 @@ namespace CodeBase.Hero
     private int _layerMask;
 
 
+    [Inject]
+    private void Construct(IInputService inputService)
+    {
+      _inputService = inputService;
+    }
+
     private void Awake()
     {
-      _inputService = AllServices.Container.Single<IInputService>();
       _layerMask = 1 << LayerMask.NameToLayer("Hittable");
-      _playerDeath.Dead += Death;
+      _playerDeath.Dead += HideWeapon;
     }
 
     private void Update() => 
@@ -83,7 +88,7 @@ namespace CodeBase.Hero
       transform.DOLocalMove(horizontalHideWeapon, 2);
     }
 
-    private void Death()
+    private void HideWeapon()
     {
       DeathAnimation();
       enabled = false;

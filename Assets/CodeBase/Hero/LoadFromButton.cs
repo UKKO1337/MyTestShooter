@@ -2,6 +2,7 @@
 using CodeBase.Services;
 using CodeBase.Services.Input;
 using UnityEngine;
+using Zenject;
 
 namespace CodeBase.Hero
 {
@@ -11,11 +12,15 @@ namespace CodeBase.Hero
     private IInputService _inputService;
     private bool _isLoadGame;
 
-    private void Awake()
+    
+    
+    [Inject]
+    private void Construct(IInputService inputService, IGameStateMachine stateMachine)
     {
-      _stateMachine = AllServices.Container.Single<IGameStateMachine>();
-      _inputService = AllServices.Container.Single<IInputService>();
+      _stateMachine = stateMachine;
+      _inputService = inputService;
     }
+    
 
     private void Update() => 
       LoadGame();

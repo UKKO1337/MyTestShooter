@@ -2,21 +2,25 @@
 using CodeBase.Services.PersistentProgress;
 using CodeBase.Services.SaveLoad;
 using UnityEditor;
+using Zenject;
 
 namespace CodeBase.Infrastructure.States
 {
   public class LoadProgressState :  IGamePayloadedState<bool>, IGameState
   {
-    private readonly GameStateMachine _gameStateMachine;
-    private readonly IPersistentProgressService _progressService;
-    private readonly ISaveLoadService _saveLoadService;
+    private IGameStateMachine _gameStateMachine;
+    private IPersistentProgressService _progressService;
+    private ISaveLoadService _saveLoadService;
 
-    public LoadProgressState(GameStateMachine gameStateMachine, IPersistentProgressService progressService, ISaveLoadService saveLoadService)
+    [Inject]
+    private void Construct(IGameStateMachine gameStateMachine, IPersistentProgressService progressService,
+      ISaveLoadService saveLoadService)
     {
       _gameStateMachine = gameStateMachine;
       _progressService = progressService;
       _saveLoadService = saveLoadService;
     }
+    
 
     public void Enter(bool isNewGame)
     {

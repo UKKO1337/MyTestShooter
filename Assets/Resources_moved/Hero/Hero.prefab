@@ -51,7 +51,7 @@ MonoBehaviour:
   _player: {fileID: 3963386552639930074}
   _camera: {fileID: 3963386553626852143}
   _fov: 60
-  _rotateSpeed: 20
+  _rotateSpeed: 5
 --- !u!1 &3963386552639930078
 GameObject:
   m_ObjectHideFlags: 0
@@ -213,7 +213,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3963386552639930078}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 68a795ff80b149d6821891abbda56ffa, type: 3}
   m_Name: 
@@ -365,7 +365,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: fbc2ed788df23a341b7167c34343e078, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.5
+  m_Volume: 0.25
   m_Pitch: 1
   Loop: 0
   Mute: 0

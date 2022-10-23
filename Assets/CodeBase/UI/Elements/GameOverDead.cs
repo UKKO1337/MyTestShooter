@@ -4,6 +4,7 @@ using CodeBase.Logic;
 using CodeBase.Services;
 using UnityEngine;
 using UnityEngine.UI;
+using Zenject;
 
 namespace CodeBase.UI.Elements
 {
@@ -18,10 +19,15 @@ namespace CodeBase.UI.Elements
     private IGameStateMachine _stateMachine;
     private PlayerDeath _playerDeath;
 
+    [Inject]
+    private void Construct(IGameStateMachine stateMachine)
+    {
+      _stateMachine = stateMachine;
+    }
+    
     public void Construct(PlayerDeath playerDeath)
     {
       _gameOverDead.SetActive(false);
-      _stateMachine = AllServices.Container.Single<IGameStateMachine>();
       _playerDeath = playerDeath;
       _playerDeath.Dead += ShowGameOver;
       _newGameButton.onClick.AddListener(StartNewGame);

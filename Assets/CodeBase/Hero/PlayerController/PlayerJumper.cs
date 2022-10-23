@@ -1,7 +1,9 @@
 ﻿using System;
 using CodeBase.Services;
 using CodeBase.Services.Input;
+using CodeBase.UI.Elements;
 using UnityEngine;
+using Zenject;
 
 namespace CodeBase.Hero.PlayerController
 {
@@ -16,9 +18,14 @@ namespace CodeBase.Hero.PlayerController
     private bool _isGrounded;
 
 
+    [Inject]
+    private void Construct(IInputService inputService)
+    {
+      _inputService = inputService;
+    }
+
     private void Awake()
     {
-      _inputService = AllServices.Container.Single<IInputService>();
       _playerDeath.Dead += JumperOff;
     }
 

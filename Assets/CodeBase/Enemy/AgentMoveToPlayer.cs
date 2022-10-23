@@ -12,9 +12,7 @@ namespace CodeBase.Enemy
     public NavMeshAgent Agent;
 
     private Transform _heroTransform;
-
-    private IGameFactory _gameFactory;
-
+    
 
     public void Construct(Transform heroTransform) => 
       _heroTransform = heroTransform;

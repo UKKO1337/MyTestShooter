@@ -1,6 +1,7 @@
 ﻿using CodeBase.Services;
 using CodeBase.Services.SaveLoad;
 using UnityEngine;
+using Zenject;
 
 namespace CodeBase.Logic
 {
@@ -10,10 +11,10 @@ namespace CodeBase.Logic
 
     public BoxCollider Collider;
 
-    private void Awake()
-    {
-      _saveLoadService = AllServices.Container.Single<ISaveLoadService>();
-    }
+    [Inject]
+    private void Construct(ISaveLoadService saveLoadService) => 
+      _saveLoadService = saveLoadService;
+    
 
     private void OnTriggerEnter(Collider other)
     {

@@ -1,23 +1,27 @@
 ﻿using CodeBase.Services.PersistentProgress;
+using UnityEngine;
+using Zenject;
 
 namespace CodeBase.Infrastructure.States
 {
   public class MainMenuState : IGameState
   {
-    private readonly GameStateMachine _gameStateMachine;
-    private readonly SceneLoader _sceneLoader;
-    private readonly LoadingCurtain _curtain;
+    private IGameStateMachine _gameStateMachine;
+    private SceneLoader _sceneLoader;
+    private LoadingCurtain _curtain;
 
-    public MainMenuState(GameStateMachine gameStateMachine, SceneLoader sceneLoader, LoadingCurtain curtain)
+
+    [Inject]
+    private void Construct(IGameStateMachine gameStateMachine, SceneLoader sceneLoader, LoadingCurtain curtain)
     {
       _curtain = curtain;
       _gameStateMachine = gameStateMachine;
       _sceneLoader = sceneLoader;
-      
     }
 
     public void Enter()
     {
+      ResumeGame();
       _curtain.Hide();
       _sceneLoader.Load("Main_menu");
       _gameStateMachine.Enter<GameLoopState>();
@@ -28,5 +32,7 @@ namespace CodeBase.Infrastructure.States
       
     }
     
+    private void ResumeGame() => 
+      Time.timeScale = 1;
   }
 }

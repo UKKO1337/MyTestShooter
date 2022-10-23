@@ -4,6 +4,7 @@ using CodeBase.Enemy;
 using CodeBase.Infrastructure.Factory;
 using CodeBase.Services.PersistentProgress;
 using UnityEngine;
+using Zenject;
 
 namespace CodeBase.Logic.EnemySpawners
 {
@@ -16,6 +17,12 @@ namespace CodeBase.Logic.EnemySpawners
     private IGameFactory _gameFactory;
     private EnemyDeath _enemyDeath;
 
+    // [Inject]
+    // private void Construct(IGameFactory factory)
+    // {
+    //   _gameFactory = factory;
+    // }
+    
     public void Construct(IGameFactory factory) =>
       _gameFactory = factory;
 

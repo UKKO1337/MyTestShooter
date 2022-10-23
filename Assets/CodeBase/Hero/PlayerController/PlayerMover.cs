@@ -3,8 +3,10 @@ using CodeBase.Data;
 using CodeBase.Services;
 using CodeBase.Services.Input;
 using CodeBase.Services.PersistentProgress;
+using CodeBase.UI.Elements;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using Zenject;
 
 namespace CodeBase.Hero.PlayerController
 {
@@ -25,17 +27,21 @@ namespace CodeBase.Hero.PlayerController
   private float _sprintCooldownReset;
 
   private bool _isSprintCooldown;
-
   private bool _isSprinting;
 
   private IInputService _inputService;
 
 
+  [Inject]
+  private void Construct(IInputService inputService)
+  {
+   _inputService = inputService;
+  }
+
   private void Awake()
   {
    SprintRemaining = SprintDuration;
    _sprintCooldownReset = _sprintCooldownTimer;
-   _inputService = AllServices.Container.Single<IInputService>();
    _playerDeath.Dead += MoverOff;
   }
 

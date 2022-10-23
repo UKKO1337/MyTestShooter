@@ -1,6 +1,8 @@
 ﻿using CodeBase.Services;
 using CodeBase.Services.Input;
+using CodeBase.UI.Elements;
 using UnityEngine;
+using Zenject;
 
 namespace CodeBase.Hero.PlayerController
 {
@@ -12,12 +14,17 @@ namespace CodeBase.Hero.PlayerController
     private Vector3 _originalScale;
     private float _crouchHeight = 0.75f;
 
-    
+
+    [Inject]
+    private void Construct(IInputService inputService)
+    {
+      _inputService = inputService;
+    }
+
     private void Awake()
     {
-      _inputService = AllServices.Container.Single<IInputService>();
       _originalScale = transform.localScale;
-      _playerDeath.Dead += CrouchingOf;
+      _playerDeath.Dead += CrouchingOff;
     }
 
     private void Update()
@@ -34,7 +41,7 @@ namespace CodeBase.Hero.PlayerController
         transform.localScale = new Vector3(_originalScale.x, _originalScale.y, _originalScale.z);
     }
 
-    private void CrouchingOf() => 
+    private void CrouchingOff() => 
       enabled = false;
   }
 }

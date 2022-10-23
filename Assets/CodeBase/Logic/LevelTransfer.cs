@@ -1,7 +1,7 @@
 ﻿using CodeBase.Infrastructure.States;
-using CodeBase.Services;
 using UnityEngine;
 using UnityEngine.UI;
+using Zenject;
 
 namespace CodeBase.Logic
 {
@@ -15,9 +15,13 @@ namespace CodeBase.Logic
     private bool _IsNewGame;
 
 
+
+    [Inject]
+    private void Construct(IGameStateMachine gameStateMachine) => 
+      _stateMachine = gameStateMachine;
+
     private void Awake()
     {
-      _stateMachine = AllServices.Container.Single<IGameStateMachine>();
       _newGameButton.onClick.AddListener(StartNewGame);
       _continueButton.onClick.AddListener(ContinueGame);
       _exitButton.onClick.AddListener(ExitGame);

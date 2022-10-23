@@ -1,27 +1,25 @@
 ﻿using System.Collections.Generic;
 using System.Threading.Tasks;
 using CodeBase.Enemy;
-using CodeBase.Hero;
-using CodeBase.Hero.PlayerController;
 using CodeBase.Infrastructure.AssetManagement;
 using CodeBase.Logic;
 using CodeBase.Logic.EnemySpawners;
 using CodeBase.Services;
-using CodeBase.Services.Input;
 using CodeBase.Services.PersistentProgress;
 using CodeBase.StaticData;
-using CodeBase.UI;
 using UnityEngine;
 using UnityEngine.AI;
+using Zenject;
 using Object = UnityEngine.Object;
 
 namespace CodeBase.Infrastructure.Factory
 {
   public class GameFactory : IGameFactory
   {
-    private readonly IAssets _asset;
-    private readonly IStaticDataService _staticData;
+    private IAssets _asset;
+    private IStaticDataService _staticData;
     private IPersistentProgressService _progressService;
+    [Inject] private DiContainer _diContainer;
 
     public List<ISavedProgressReader> ProgressReaders { get; } = new List<ISavedProgressReader>();
 
@@ -33,12 +31,15 @@ namespace CodeBase.Infrastructure.Factory
 
     private GameObject UIGameObject { get; set; }
 
-    public GameFactory(IAssets asset, IStaticDataService staticData, IPersistentProgressService progressService)
+
+    [Inject]
+    private void Construct(IAssets assets, IStaticDataService staticData, IPersistentProgressService progressService)
     {
       _progressService = progressService;
-      _asset = asset;
+      _asset = assets;
       _staticData = staticData;
     }
+    
 
     public async Task WarmUp()
     {
@@ -95,7 +96,6 @@ namespace CodeBase.Infrastructure.Factory
       GameObject prefab = await _asset.Load<GameObject>(AssetsAddress.Spawner);
       SpawnPoint spawner = InstantiateRegistered(prefab, at)
         .GetComponent<SpawnPoint>();
-      
       spawner.Construct(this);
       spawner.Id = spawnerId;
       spawner.ZombieTypeId = zombieTypeId;
@@ -110,14 +110,19 @@ namespace CodeBase.Infrastructure.Factory
 
     private async Task<GameObject> InstantiateRegisteredAsync(string prefabPath, Vector3 at)
     {
-      GameObject gameObject = await _asset.Instantiate(prefabPath, at);
+      GameObject prefab = await _asset.Load<GameObject>(prefabPath);
+      
+      GameObject gameObject = _diContainer.InstantiatePrefab(prefab, at, Quaternion.identity, null);
       RegisterProgressWatchers(gameObject);
       return gameObject;
+      
     }
 
     private async Task<GameObject> InstantiateRegisteredAsync(string prefabPath)
     {
-      GameObject gameObject = await _asset.Instantiate(prefabPath);
+      GameObject prefab = await _asset.Load<GameObject>(prefabPath);
+      
+      GameObject gameObject = _diContainer.InstantiatePrefab(prefab);
       RegisterProgressWatchers(gameObject);
       return gameObject;
     }

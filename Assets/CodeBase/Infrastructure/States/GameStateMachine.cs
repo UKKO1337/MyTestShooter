@@ -3,28 +3,48 @@ using System.Collections.Generic;
 using CodeBase.Infrastructure.Factory;
 using CodeBase.Logic;
 using CodeBase.Services;
+using CodeBase.Services.Input;
 using CodeBase.Services.PersistentProgress;
 using CodeBase.Services.SaveLoad;
+using Zenject;
 
 namespace CodeBase.Infrastructure.States
 {
   public class GameStateMachine : IGameStateMachine
   {
-    private readonly Dictionary<Type, IGameBaseState> _states;
+    private Dictionary<Type, IGameBaseState> _states;
     private IGameBaseState _activeState;
 
+    private BootstrapState _bootstrapState;
+    private MainMenuState _mainMenuState;
+    private LoadLevelState _loadLevelState;
+    private LoadProgressState _loadProgressState;
+    private GameLoopState _gameLoopState;
 
-    public GameStateMachine(SceneLoader sceneLoader, LoadingCurtain curtain, AllServices services)
+
+    [Inject]
+    private void Construct(BootstrapState bootstrapState, MainMenuState mainMenuState,
+      LoadLevelState loadLevelState, LoadProgressState loadProgressState, GameLoopState gameLoopState)
     {
+      _bootstrapState = bootstrapState;
+      _mainMenuState = mainMenuState;
+      _loadLevelState = loadLevelState;
+      _loadProgressState = loadProgressState;
+      _gameLoopState = gameLoopState;
       _states = new Dictionary<Type, IGameBaseState>
       {
-        [typeof(BootstrapState)] = new BootstrapState(this, sceneLoader, services, curtain),
-        [typeof(MainMenuState)] = new MainMenuState (this, sceneLoader, curtain),
-        [typeof(LoadLevelState)] = new LoadLevelState(this, sceneLoader, curtain, services.Single<IGameFactory>(), services.Single<IPersistentProgressService>(), services.Single<IStaticDataService>()),
-        [typeof(LoadProgressState)] = new LoadProgressState(this,services.Single<IPersistentProgressService>(),services.Single<ISaveLoadService>()),
-        [typeof(GameLoopState)] = new GameLoopState(this),
+        [typeof(BootstrapState)] = _bootstrapState,
+        [typeof(MainMenuState)] = _mainMenuState,
+        [typeof(LoadLevelState)] = _loadLevelState,
+        [typeof(LoadProgressState)] = _loadProgressState,
+        [typeof(GameLoopState)] = _gameLoopState,
         
       };
+    }
+    
+    public GameStateMachine()
+    {
+      
     }
     
     
